@@ -210,7 +210,18 @@
         /* ======================================
            Hero
         ====================================== */
-        .hero { padding-top: 4.5rem; padding-bottom: 4.5rem; border-top: none; }
+        .hero { padding-top: 4.5rem; padding-bottom: 4.5rem; border-top: none; position: relative; overflow: hidden; }
+        .hero-bg {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background: url('images/hero-bg.webp') center/cover no-repeat;
+            opacity: 0.5;
+            -webkit-mask-image: radial-gradient(120% 100% at 70% 40%, #000 30%, transparent 85%);
+            mask-image: radial-gradient(120% 100% at 70% 40%, #000 30%, transparent 85%);
+        }
+        .hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(5,17,26,0.35) 0%, rgba(5,17,26,0.75) 100%);
+        }
         .hero-grid {
             display: grid; grid-template-columns: 1.35fr 1fr; gap: 4rem; align-items: center;
         }
@@ -519,6 +530,7 @@
 
         <!-- ===================== Hero ===================== -->
         <section id="hero" class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
