@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Lab IA — ícone">
+  <defs>
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBF2"/>
+      <stop offset="26%" stop-color="#FFD982"/>
+      <stop offset="52%" stop-color="#FFB442"/>
+      <stop offset="80%" stop-color="#34C9B6"/>
+      <stop offset="100%" stop-color="#1AA193" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFC76B" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#FFB442" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFB442" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#05111A"/>
+  <circle cx="128" cy="128" r="104" fill="url(#halo)"/>
+  <circle cx="128" cy="128" r="62" fill="url(#spark)" filter="url(#soft)"/>
+  <circle cx="128" cy="128" r="42" fill="url(#spark)"/>
+  <circle cx="110" cy="110" r="11" fill="#FFFEFA" opacity="0.92"/>
+</svg>
