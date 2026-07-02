@@ -507,7 +507,7 @@
                 <a href="#hero" class="logo">Francisco Pena<span class="dot">.</span></a>
                 <nav class="nav-main" role="navigation" aria-label="Principal">
                     <ul class="nav-links">
-                        <li><a href="#projects" class="nav-link" data-key="nav-projects">Projetos</a></li>
+                        <li><a href="#projects" class="nav-link" data-key="nav-projects">Entregas</a></li>
                         <li><a href="#about-me" class="nav-link" data-key="nav-about">Sobre</a></li>
                         <li><a href="#recommendations" class="nav-link" data-key="nav-recommendations">Recomendações</a></li>
                         <li><a href="#skills" class="nav-link" data-key="nav-skills">Habilidades</a></li>
@@ -542,7 +542,7 @@
                             Bem-vindo ao meu portfólio. Aqui eu mostro como venho aplicando inteligência artificial junto com métodos de processo pra escalar eficiência — da linha de produção ao pronto-socorro.
                         </p>
                         <div class="hero-actions" data-stagger="4">
-                            <a href="#projects" class="btn btn-primary" data-key="cta-projects">Ver projetos <i class="fas fa-arrow-down"></i></a>
+                            <a href="#projects" class="btn btn-primary"><span data-key="cta-projects">Ver entregas</span> <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
                             <button class="voice-btn" id="voice-btn" aria-label="Ouvir apresentação na minha voz">
                                 <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
                                 <span id="voice-label" data-key="voice-play">OUÇA NA MINHA VOZ</span>
@@ -579,65 +579,65 @@
         <section id="projects" class="projects-section">
             <div class="container">
                 <div class="section-head">
-                    <span class="eyebrow">Resultados</span>
-                    <h2 class="section-title">Principais entregas</h2>
-                    <p>Resultado real e medido, do problema ao indicador de negócio. O método Lean decide onde a IA e os dados entram.</p>
+                    <span class="eyebrow" data-key="projects-eyebrow">Resultados</span>
+                    <h2 class="section-title" data-key="projects-header">Principais entregas</h2>
+                    <p data-key="projects-lead">Resultado real e medido, do problema ao indicador de negócio. O método Lean decide onde a IA e os dados entram.</p>
                 </div>
 
-                <div class="subhead">Saúde · Lean nas Emergências (PROADI-SUS)</div>
+                <div class="subhead" data-key="projects-group-1">Saúde · Lean nas Emergências (PROADI-SUS)</div>
                 <div class="projects-grid">
                     <article class="project-card featured reveal">
-                        <div class="pc-top"><span class="pc-kicker">4 hospitais SUS</span><span class="pc-metric">−20% setup de leitos</span></div>
-                        <h3 class="project-title">Redução do tempo de setup de leitos</h3>
-                        <p class="project-description">Aplicativo de gestão de permanência e setup de leitos construído solo (React/TypeScript/Supabase), com queda de 20% no tempo de setup vs. linha de base.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d1-kicker">4 hospitais SUS</span><span class="pc-metric" data-key="d1-metric">−20% setup de leitos</span></div>
+                        <h3 class="project-title" data-key="d1-title">Redução do tempo de setup de leitos</h3>
+                        <p class="project-description" data-key="d1-text">Aplicativo de gestão de permanência e setup de leitos construído solo (React/TypeScript/Supabase), com queda de 20% no tempo de setup vs. linha de base.</p>
                     </article>
                     <article class="project-card featured reveal">
-                        <div class="pc-top"><span class="pc-kicker">Machine Learning</span><span class="pc-metric">AUC 0.688</span></div>
-                        <h3 class="project-title">Predição de permanência prolongada</h3>
-                        <p class="project-description">Pipeline de Machine Learning calibrado para prever internações de longa permanência, apoiando a gestão de fluxo e a antecipação de altas.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d2-kicker">Machine Learning</span><span class="pc-metric" data-key="d2-metric">AUC 0.688</span></div>
+                        <h3 class="project-title" data-key="d2-title">Predição de permanência prolongada</h3>
+                        <p class="project-description" data-key="d2-text">Pipeline de Machine Learning calibrado para prever internações de longa permanência, apoiando a gestão de fluxo e a antecipação de altas.</p>
                     </article>
                     <article class="project-card featured reveal">
-                        <div class="pc-top"><span class="pc-kicker">Giro de leitos</span><span class="pc-metric">+R$200 mil/ano</span></div>
-                        <h3 class="project-title">Custo evitado com eficiência de leitos</h3>
-                        <p class="project-description">Custo evitado superior a R$200 mil/ano com o aumento do giro de leitos e a redução da permanência, sob governança de dados clínicos e LGPD.</p>
-                    </article>
-                </div>
-
-                <div class="subhead">Melhoria Contínua · Lean Six Sigma</div>
-                <div class="projects-grid">
-                    <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">Black Belt</span><span class="pc-metric">~R$5M/ano</span></div>
-                        <h3 class="project-title">Programa de melhoria contínua</h3>
-                        <p class="project-description">Facilitação e mentoria de mais de 12 projetos de melhoria, com saving aproximado de R$5M/ano; projeto Black Belt de custo variável com ~R$1M/ano.</p>
-                    </article>
-                    <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">CAPEX Digital/TI</span><span class="pc-metric">R$80M · −14%</span></div>
-                        <h3 class="project-title">Governança de portfólio e CAPEX</h3>
-                        <p class="project-description">Suporte a CAPEX acima de R$80M/ano com cerca de 14% de otimização; OKRs e KPIs de mais de 30 produtos digitais em 57 squads.</p>
-                    </article>
-                    <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">Apex Group</span><span class="pc-metric">3,4 → 4,1</span></div>
-                        <h3 class="project-title">Satisfação de cliente</h3>
-                        <p class="project-description">Pesquisa com segmentação por clusters e estatística inferencial elevou a satisfação de 3,4 para 4,1, com mais de 50 iniciativas estratégicas em Power BI.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d3-kicker">Giro de leitos</span><span class="pc-metric" data-key="d3-metric">+R$200 mil/ano</span></div>
+                        <h3 class="project-title" data-key="d3-title">Custo evitado com eficiência de leitos</h3>
+                        <p class="project-description" data-key="d3-text">Custo evitado superior a R$200 mil/ano com o aumento do giro de leitos e a redução da permanência, sob governança de dados clínicos e LGPD.</p>
                     </article>
                 </div>
 
-                <div class="subhead">Produtos Digitais & Dados</div>
+                <div class="subhead" data-key="projects-group-2">Melhoria Contínua · Lean Six Sigma</div>
                 <div class="projects-grid">
                     <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">Product Manager · Meta</span><span class="pc-metric">+900 usuários/dia</span></div>
-                        <h3 class="project-title">Produto de apontamento de horas</h3>
-                        <p class="project-description">Coordenei um squad de 8 pessoas e entreguei um produto usado por toda a companhia (+900 usuários/dia, usabilidade 4,3/5), com −50% de rejeições de custos no fechamento contábil.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d4-kicker">Black Belt</span><span class="pc-metric" data-key="d4-metric">~R$5M/ano</span></div>
+                        <h3 class="project-title" data-key="d4-title">Programa de melhoria contínua</h3>
+                        <p class="project-description" data-key="d4-text">Facilitação e mentoria de mais de 12 projetos de melhoria, com saving aproximado de R$5M/ano; projeto Black Belt de custo variável com ~R$1M/ano.</p>
                     </article>
                     <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">Ensino · CareOn</span><span class="pc-metric">+100 alunos</span></div>
-                        <h3 class="project-title">Formação em Experiência do Paciente</h3>
-                        <p class="project-description">Estruturei e ministrei o curso de Experiência do Paciente e CX, com mais de 100 alunos formados, traduzindo Lean e KPIs de satisfação para a prática.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d5-kicker">CAPEX Digital/TI</span><span class="pc-metric" data-key="d5-metric">R$80M · −14%</span></div>
+                        <h3 class="project-title" data-key="d5-title">Governança de portfólio e CAPEX</h3>
+                        <p class="project-description" data-key="d5-text">Suporte a CAPEX acima de R$80M/ano com cerca de 14% de otimização; OKRs e KPIs de mais de 30 produtos digitais em 57 squads.</p>
                     </article>
                     <article class="project-card mini reveal">
-                        <div class="pc-top"><span class="pc-kicker">BI & Analytics</span><span class="pc-metric">Decisão por dados</span></div>
-                        <h3 class="project-title">Dashboards e relatórios preditivos</h3>
-                        <p class="project-description">Dashboards de boarding e NEDOCS em tempo real e relatórios executivos (Power BI, Python, SQL) para apoio à liderança em múltiplos setores.</p>
+                        <div class="pc-top"><span class="pc-kicker" data-key="d6-kicker">Apex Group</span><span class="pc-metric" data-key="d6-metric">3,4 → 4,1</span></div>
+                        <h3 class="project-title" data-key="d6-title">Satisfação de cliente</h3>
+                        <p class="project-description" data-key="d6-text">Pesquisa com segmentação por clusters e estatística inferencial elevou a satisfação de 3,4 para 4,1, com mais de 50 iniciativas estratégicas em Power BI.</p>
+                    </article>
+                </div>
+
+                <div class="subhead" data-key="projects-group-3">Produtos Digitais & Dados</div>
+                <div class="projects-grid">
+                    <article class="project-card mini reveal">
+                        <div class="pc-top"><span class="pc-kicker" data-key="d7-kicker">Product Manager · Meta</span><span class="pc-metric" data-key="d7-metric">+900 usuários/dia</span></div>
+                        <h3 class="project-title" data-key="d7-title">Produto de apontamento de horas</h3>
+                        <p class="project-description" data-key="d7-text">Coordenei um squad de 8 pessoas e entreguei um produto usado por toda a companhia (+900 usuários/dia, usabilidade 4,3/5), com −50% de rejeições de custos no fechamento contábil.</p>
+                    </article>
+                    <article class="project-card mini reveal">
+                        <div class="pc-top"><span class="pc-kicker" data-key="d8-kicker">Ensino · CareOn</span><span class="pc-metric" data-key="d8-metric">+100 alunos</span></div>
+                        <h3 class="project-title" data-key="d8-title">Formação em Experiência do Paciente</h3>
+                        <p class="project-description" data-key="d8-text">Estruturei e ministrei o curso de Experiência do Paciente e CX, com mais de 100 alunos formados, traduzindo Lean e KPIs de satisfação para a prática.</p>
+                    </article>
+                    <article class="project-card mini reveal">
+                        <div class="pc-top"><span class="pc-kicker" data-key="d9-kicker">BI & Analytics</span><span class="pc-metric" data-key="d9-metric">Decisão por dados</span></div>
+                        <h3 class="project-title" data-key="d9-title">Dashboards e relatórios preditivos</h3>
+                        <p class="project-description" data-key="d9-text">Dashboards de boarding e NEDOCS em tempo real e relatórios executivos (Power BI, Python, SQL) para apoio à liderança em múltiplos setores.</p>
                     </article>
                 </div>
             </div>
@@ -848,36 +848,40 @@
                 'metric2': 'tempo de setup, app feito solo com IA',
                 'metric3': 'squads com KPIs e OKRs sob governança',
 
-                'projects-eyebrow': 'Trabalho selecionado',
-                'projects-header': 'Projetos onde o método decide onde a IA entra',
-                'projects-sub': 'Ferramentas que construí sozinho, com IA e low-code, pra resolver gargalos reais de operação. Todas no ar.',
-                'projects-group-ai': 'IA + Lean aplicados',
-                'projects-group-ds': 'Fundação · Ciência de Dados',
-                'visit': 'Abrir projeto', 'learn-more': 'Saiba mais',
+                'projects-eyebrow': 'Resultados',
+                'projects-header': 'Principais entregas',
+                'projects-lead': 'Resultado real e medido, do problema ao indicador de negócio. O método Lean decide onde a IA e os dados entram.',
+                'projects-group-1': 'Saúde · Lean nas Emergências (PROADI-SUS)',
+                'projects-group-2': 'Melhoria Contínua · Lean Six Sigma',
+                'projects-group-3': 'Produtos Digitais & Dados',
 
-                'p-ai1-kicker': 'Saúde · Financeiro', 'p-ai1-metric': 'Gargalo priorizado',
-                'p-ai1-title': 'Assessment do Ciclo da Receita',
-                'p-ai1-text': 'Radar de maturidade do ciclo da receita hospitalar. Acha o gargalo financeiro via Teoria das Restrições e devolve o R$ em risco — não média simples, mas a restrição que limita o caixa.',
-                'p-ai2-kicker': 'Saúde · Custo evitado', 'p-ai2-metric': 'Leitos não construídos',
-                'p-ai2-title': 'Calculadora de Eficiência de Leitos',
-                'p-ai2-text': 'Custo evitado: cruza o custo de construir um leito com o ganho de girar melhor os que já existem. Mostra quantos leitos o hospital deixa de precisar construir ao reduzir tempo de permanência.',
-                'p-ai3-kicker': 'Saúde · 4 hospitais', 'p-ai3-metric': '−20% setup',
-                'p-ai3-title': 'Gestão de Leitos e Fluxo',
-                'p-ai3-text': 'Suíte de painéis de gestão de leitos e fluxo de pacientes, em produção em quatro hospitais do SUS. Construída sozinho, com IA e low-code, sem time de TI dedicado.',
-                'p-ai4-kicker': 'Saúde · Gestão', 'p-ai4-metric': 'Visão executiva',
-                'p-ai4-title': 'Cockpit de Hospitais',
-                'p-ai4-text': 'Visão executiva cross-hospital dos indicadores de leito e fluxo, num painel único pra liderança acompanhar a operação em tempo quase real.',
-
-                'project1-title': 'Credit Scoring para Empréstimos',
-                'project1-text': 'Modelo de regressão logística pra prever risco de crédito de novos solicitantes a partir do histórico financeiro.',
-                'project2-title': 'Power BI para E-commerce',
-                'project2-text': 'Relatório com pipeline de ETL monitorando KPIs de Vendas, Logística e Qualidade da operação da Olist.',
-                'project3-title': 'Painel Gerencial em Streamlit',
-                'project3-text': 'Painel web com as principais métricas de um marketplace de delivery de comida, do dado bruto ao deploy.',
-                'project4-title': 'Análise do Mercado de Aluguel',
-                'project4-text': 'EDA do mercado de aluguel de imóveis no Brasil: padrões de preço, tamanho e localização que explicam a variação.',
-                'project5-title': 'Análise de E-commerce em SQL',
-                'project5-text': 'Segmentação de clientes em SQL por avaliações, frequência e categoria, apontando oportunidades de fidelização.',
+                'd1-kicker': '4 hospitais SUS', 'd1-metric': '−20% setup de leitos',
+                'd1-title': 'Redução do tempo de setup de leitos',
+                'd1-text': 'Aplicativo de gestão de permanência e setup de leitos construído solo (React/TypeScript/Supabase), com queda de 20% no tempo de setup vs. linha de base.',
+                'd2-kicker': 'Machine Learning', 'd2-metric': 'AUC 0.688',
+                'd2-title': 'Predição de permanência prolongada',
+                'd2-text': 'Pipeline de Machine Learning calibrado para prever internações de longa permanência, apoiando a gestão de fluxo e a antecipação de altas.',
+                'd3-kicker': 'Giro de leitos', 'd3-metric': '+R$200 mil/ano',
+                'd3-title': 'Custo evitado com eficiência de leitos',
+                'd3-text': 'Custo evitado superior a R$200 mil/ano com o aumento do giro de leitos e a redução da permanência, sob governança de dados clínicos e LGPD.',
+                'd4-kicker': 'Black Belt', 'd4-metric': '~R$5M/ano',
+                'd4-title': 'Programa de melhoria contínua',
+                'd4-text': 'Facilitação e mentoria de mais de 12 projetos de melhoria, com saving aproximado de R$5M/ano; projeto Black Belt de custo variável com ~R$1M/ano.',
+                'd5-kicker': 'CAPEX Digital/TI', 'd5-metric': 'R$80M · −14%',
+                'd5-title': 'Governança de portfólio e CAPEX',
+                'd5-text': 'Suporte a CAPEX acima de R$80M/ano com cerca de 14% de otimização; OKRs e KPIs de mais de 30 produtos digitais em 57 squads.',
+                'd6-kicker': 'Apex Group', 'd6-metric': '3,4 → 4,1',
+                'd6-title': 'Satisfação de cliente',
+                'd6-text': 'Pesquisa com segmentação por clusters e estatística inferencial elevou a satisfação de 3,4 para 4,1, com mais de 50 iniciativas estratégicas em Power BI.',
+                'd7-kicker': 'Product Manager · Meta', 'd7-metric': '+900 usuários/dia',
+                'd7-title': 'Produto de apontamento de horas',
+                'd7-text': 'Coordenei um squad de 8 pessoas e entreguei um produto usado por toda a companhia (+900 usuários/dia, usabilidade 4,3/5), com −50% de rejeições de custos no fechamento contábil.',
+                'd8-kicker': 'Ensino · CareOn', 'd8-metric': '+100 alunos',
+                'd8-title': 'Formação em Experiência do Paciente',
+                'd8-text': 'Estruturei e ministrei o curso de Experiência do Paciente e CX, com mais de 100 alunos formados, traduzindo Lean e KPIs de satisfação para a prática.',
+                'd9-kicker': 'BI & Analytics', 'd9-metric': 'Decisão por dados',
+                'd9-title': 'Dashboards e relatórios preditivos',
+                'd9-text': 'Dashboards de boarding e NEDOCS em tempo real e relatórios executivos (Power BI, Python, SQL) para apoio à liderança em múltiplos setores.',
 
                 'about-eyebrow': 'Quem sou', 'about-me-header': 'Sobre mim',
                 'cred1': 'Black Belt & Green Belt Lean Six Sigma',
@@ -925,36 +929,40 @@
                 'metric2': 'setup time, app built solo with AI',
                 'metric3': 'squads with KPIs and OKRs under governance',
 
-                'projects-eyebrow': 'Selected work',
-                'projects-header': 'Projects where the method decides where AI goes',
-                'projects-sub': 'Tools I built solo, with AI and low-code, to solve real operational bottlenecks. All live.',
-                'projects-group-ai': 'AI + Lean applied',
-                'projects-group-ds': 'Foundation · Data Science',
-                'visit': 'Open project', 'learn-more': 'Learn more',
+                'projects-eyebrow': 'Results',
+                'projects-header': 'Key deliveries',
+                'projects-lead': 'Real, measured results, from problem to business indicator. The Lean method decides where AI and data come in.',
+                'projects-group-1': 'Healthcare · Lean in Emergency Care (PROADI-SUS)',
+                'projects-group-2': 'Continuous Improvement · Lean Six Sigma',
+                'projects-group-3': 'Digital Products & Data',
 
-                'p-ai1-kicker': 'Healthcare · Finance', 'p-ai1-metric': 'Bottleneck ranked',
-                'p-ai1-title': 'Revenue Cycle Assessment',
-                'p-ai1-text': 'Maturity radar for the hospital revenue cycle. Finds the financial bottleneck via Theory of Constraints and returns the money at risk — not a simple average, but the constraint that limits cash.',
-                'p-ai2-kicker': 'Healthcare · Avoided cost', 'p-ai2-metric': 'Beds not built',
-                'p-ai2-title': 'Bed Efficiency Calculator',
-                'p-ai2-text': 'Avoided cost: crosses the cost of building a bed with the gain of turning over the existing ones better. Shows how many beds a hospital no longer needs to build by reducing length of stay.',
-                'p-ai3-kicker': 'Healthcare · 4 hospitals', 'p-ai3-metric': '−20% setup',
-                'p-ai3-title': 'Bed & Patient Flow Management',
-                'p-ai3-text': 'A suite of bed and patient-flow dashboards, in production across four public (SUS) hospitals. Built solo, with AI and low-code, without a dedicated IT team.',
-                'p-ai4-kicker': 'Healthcare · Management', 'p-ai4-metric': 'Executive view',
-                'p-ai4-title': 'Hospitals Cockpit',
-                'p-ai4-text': 'Cross-hospital executive view of bed and flow indicators, in a single panel for leadership to track operations in near real time.',
-
-                'project1-title': 'Credit Scoring for Personal Loans',
-                'project1-text': 'Logistic regression model to predict the credit risk of new applicants from their financial history.',
-                'project2-title': 'Power BI for E-commerce',
-                'project2-text': 'Report with an ETL pipeline monitoring Sales, Logistics and Quality KPIs for Olist operations.',
-                'project3-title': 'Management Dashboard in Streamlit',
-                'project3-text': 'Web dashboard with the main metrics of a food-delivery marketplace, from raw data to deploy.',
-                'project4-title': 'Rental Market Analysis',
-                'project4-text': 'EDA of the Brazilian real-estate rental market: price, size and location patterns that explain the variation.',
-                'project5-title': 'E-commerce Analysis in SQL',
-                'project5-text': 'Customer segmentation in SQL by ratings, frequency and category, pointing to loyalty opportunities.',
+                'd1-kicker': '4 SUS hospitals', 'd1-metric': '−20% bed setup',
+                'd1-title': 'Bed setup time reduction',
+                'd1-text': 'Length-of-stay and bed setup management app built solo (React/TypeScript/Supabase), with a 20% drop in setup time vs. baseline.',
+                'd2-kicker': 'Machine Learning', 'd2-metric': 'AUC 0.688',
+                'd2-title': 'Prolonged length-of-stay prediction',
+                'd2-text': 'Calibrated Machine Learning pipeline to predict long-stay admissions, supporting flow management and early discharge planning.',
+                'd3-kicker': 'Bed turnover', 'd3-metric': '+R$200K/yr',
+                'd3-title': 'Avoided cost through bed efficiency',
+                'd3-text': 'Avoided cost above R$200K/year from higher bed turnover and shorter length of stay, under clinical data governance and LGPD.',
+                'd4-kicker': 'Black Belt', 'd4-metric': '~R$5M/yr',
+                'd4-title': 'Continuous improvement program',
+                'd4-text': 'Facilitated and mentored 12+ improvement projects, with savings of about R$5M/year; Black Belt variable-cost project worth ~R$1M/year.',
+                'd5-kicker': 'Digital/IT CAPEX', 'd5-metric': 'R$80M · −14%',
+                'd5-title': 'Portfolio and CAPEX governance',
+                'd5-text': 'Supported CAPEX above R$80M/year with about 14% optimization; OKRs and KPIs for 30+ digital products across 57 squads.',
+                'd6-kicker': 'Apex Group', 'd6-metric': '3.4 → 4.1',
+                'd6-title': 'Customer satisfaction',
+                'd6-text': 'Survey with cluster segmentation and inferential statistics raised satisfaction from 3.4 to 4.1, with 50+ strategic initiatives in Power BI.',
+                'd7-kicker': 'Product Manager · Meta', 'd7-metric': '+900 users/day',
+                'd7-title': 'Time-tracking product',
+                'd7-text': 'Led an 8-person squad and delivered a product used company-wide (900+ users/day, 4.3/5 usability), with a 50% drop in cost rejections at monthly close.',
+                'd8-kicker': 'Teaching · CareOn', 'd8-metric': '+100 students',
+                'd8-title': 'Patient Experience training',
+                'd8-text': 'Designed and taught the Patient Experience and CX course, with 100+ students trained, translating Lean and satisfaction KPIs into practice.',
+                'd9-kicker': 'BI & Analytics', 'd9-metric': 'Data-driven decisions',
+                'd9-title': 'Dashboards and predictive reports',
+                'd9-text': 'Real-time boarding and NEDOCS dashboards and executive reports (Power BI, Python, SQL) supporting leadership across multiple areas.',
 
                 'about-eyebrow': 'Who I am', 'about-me-header': 'About me',
                 'cred1': 'Lean Six Sigma Black Belt & Green Belt',
