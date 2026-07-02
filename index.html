@@ -344,11 +344,12 @@
             text-transform: uppercase; color: var(--teal);
         }
         .tl-text { color: var(--text-dim); font-size: 0.98rem; line-height: 1.65; margin-top: 0.7rem; max-width: 62ch; }
-        .tl-metrics { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.05rem; }
-        .tl-pill {
-            font-family: var(--font-mono); font-weight: 600; font-size: 0.95rem;
-            color: var(--teal); background: rgba(52,201,182,0.08); border: 1px solid rgba(52,201,182,0.28);
-            padding: 0.45rem 0.9rem; border-radius: 999px; white-space: nowrap;
+        .tl-context { color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0.65rem; max-width: 64ch; }
+        .tl-bullets { list-style: none; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; max-width: 68ch; }
+        .tl-bullets li { color: var(--text-dim); font-size: 0.95rem; line-height: 1.6; padding-left: 1.15rem; position: relative; }
+        .tl-bullets li::before {
+            content: ''; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--teal); opacity: 0.7;
         }
         .tl-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.95rem; }
         .tl-live {
@@ -579,14 +580,15 @@
                 <div class="timeline">
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t1-period">2025 — hoje</p>
-                        <h3 class="tl-title" data-key="t1-title">BP — A Beneficência Portuguesa</h3>
-                        <p class="tl-role" data-key="t1-role">Especialista em Processos Lean · 4 hospitais públicos</p>
-                        <p class="tl-text" data-key="t1-text">Construí solo o app de gestão e setup de leitos, o pipeline de machine learning pra permanência prolongada e os dashboards em tempo real que rodam nos 4 hospitais; custo evitado estimado acima de R$200 mil/ano.</p>
-                        <div class="tl-metrics">
-                            <span class="tl-pill" data-key="t1-p1">−20% setup de leitos</span>
-                            <span class="tl-pill" data-key="t1-p2">AUC 0.688</span>
-                            <span class="tl-pill" data-key="t1-p3">+R$200 mil/ano</span>
-                        </div>
+                        <h3 class="tl-title" data-key="t1-title">BP — Beneficência Portuguesa</h3>
+                        <p class="tl-role" data-key="t1-role">Consultor</p>
+                        <p class="tl-context" data-key="t1-context">Consultor do Lean nas Emergências (PROADI-SUS, Ministério da Saúde): redução de superlotação e eficiência em hospitais públicos.</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t1-b1">Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: redução de 20% no tempo de setup</li>
+                            <li data-key="t1-b2">Machine Learning pra predição de permanência prolongada (modelo calibrado, AUC 0.688)</li>
+                            <li data-key="t1-b3">Dashboards de indicadores assistenciais e operacionais em tempo real</li>
+                            <li data-key="t1-b4">Gestão visual no SUS: Kaizen A3, Kamishibai e Protocolo de Capacidade Plena</li>
+                        </ul>
                         <div class="tl-links">
                             <span class="tl-live" data-key="tl-live">No ar</span>
                             <a class="tl-link" href="https://hmsa-leitos.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-leitos">Gestão de leitos</a>
@@ -597,61 +599,57 @@
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t2-period">2024</p>
-                        <h3 class="tl-title" data-key="t2-title">Meta · Consultoria</h3>
+                        <h3 class="tl-title" data-key="t2-title">Meta</h3>
                         <p class="tl-role" data-key="t2-role">Product Manager</p>
-                        <p class="tl-text" data-key="t2-text">Coordenei um squad de 8 pessoas e entreguei o produto de apontamento de horas usado por toda a companhia.</p>
-                        <div class="tl-metrics">
-                            <span class="tl-pill" data-key="t2-p1">+900 usuários/dia</span>
-                            <span class="tl-pill" data-key="t2-p2">4,3/5 usabilidade</span>
-                            <span class="tl-pill" data-key="t2-p3">−50% rejeições de custo</span>
-                        </div>
+                        <p class="tl-context" data-key="t2-context">Plataforma digital da jornada do colaborador.</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t2-b1">Squad de 8 pessoas; produto usado por toda a companhia: +900 usuários/dia, usabilidade 4,3/5</li>
+                            <li data-key="t2-b2">Redução de 50% nas rejeições de custos no fechamento contábil</li>
+                        </ul>
                     </article>
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t3-period">2023 — 2025</p>
                         <h3 class="tl-title" data-key="t3-title">CareOn Brasil</h3>
-                        <p class="tl-role" data-key="t3-role">Professor</p>
-                        <p class="tl-text" data-key="t3-text">Estruturei e ministrei o curso de Experiência do Paciente e CX, traduzindo Lean e KPIs de satisfação pra prática de quem atende.</p>
-                        <div class="tl-metrics">
-                            <span class="tl-pill" data-key="t3-p1">+100 alunos formados</span>
-                        </div>
+                        <p class="tl-role" data-key="t3-role">Professor — Lean Healthcare & Experiência do Paciente</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t3-b1">Curso de Experiência do Paciente: mais de 100 profissionais de saúde formados</li>
+                        </ul>
                     </article>
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t4-period">2023 — 2024</p>
-                        <h3 class="tl-title" data-key="t4-title">SETA Desenvolvimento Gerencial</h3>
-                        <p class="tl-role" data-key="t4-role">Consultor Lean · multissetor</p>
-                        <p class="tl-text" data-key="t4-text">Projetos de melhoria em Banco Fibra, VR Benefícios, Puravida e MRS: redução de lead time, ganho de acuracidade e savings em processos administrativos e operacionais.</p>
+                        <h3 class="tl-title" data-key="t4-title">SETA</h3>
+                        <p class="tl-role" data-key="t4-role">Consultor de Processos e Performance</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t4-b1">Melhorias em Banco Fibra, VR Benefícios, Puravida e MRS Logística: redução de lead time, ganhos de acuracidade, savings e receita incremental</li>
+                        </ul>
                     </article>
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t5-period">2021 — 2023</p>
                         <h3 class="tl-title" data-key="t5-title">Apex Group</h3>
-                        <p class="tl-role" data-key="t5-role">Coordenador de Melhoria Contínua</p>
-                        <p class="tl-text" data-key="t5-text">Estruturei a nova área de atendimento ao cliente com pesquisa por clusters e estatística inferencial, e conduzi o carve-out MAF DTVM / Banco Modal.</p>
-                        <div class="tl-metrics">
-                            <span class="tl-pill" data-key="t5-p1">3,4 → 4,1 satisfação</span>
-                            <span class="tl-pill" data-key="t5-p2">50+ iniciativas estratégicas</span>
-                        </div>
+                        <p class="tl-role" data-key="t5-role">Coordenador de Processos e Performance</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t5-b1">Estruturei a área de Projetos &amp; Qualidade; mais de 50 iniciativas estratégicas</li>
+                            <li data-key="t5-b2">Satisfação de clientes de 3,4 pra 4,1; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex</li>
+                        </ul>
                     </article>
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t6-period">2017 — 2021</p>
                         <h3 class="tl-title" data-key="t6-title">Dasa</h3>
-                        <p class="tl-role" data-key="t6-role">Especialista → Coordenador de Melhoria Contínua</p>
-                        <p class="tl-text" data-key="t6-text">Facilitei e mentorei mais de 12 projetos de melhoria e liderei a governança de OKRs e KPIs de 30+ produtos digitais, com CAPEX de R$80M/ano e cerca de 14% de otimização.</p>
-                        <div class="tl-metrics">
-                            <span class="tl-pill" data-key="t6-p1">R$5M/ano em savings</span>
-                            <span class="tl-pill" data-key="t6-p2">57 squads</span>
-                            <span class="tl-pill" data-key="t6-p3">−14% CAPEX</span>
-                        </div>
+                        <p class="tl-role" data-key="t6-role">Especialista → Coordenador</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t6-b1">Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, ~R$5M/ano em savings</li>
+                            <li data-key="t6-b2">OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com ~14% de otimização</li>
+                        </ul>
                     </article>
 
                     <article class="tl-item reveal">
                         <p class="tl-period" data-key="t7-period">2014 — 2017</p>
-                        <h3 class="tl-title" data-key="t7-title">3 Corações · Mercer · USIMINAS</h3>
-                        <p class="tl-role" data-key="t7-role">Base · Qualidade e Melhoria Contínua</p>
-                        <p class="tl-text" data-key="t7-text">Na 3 Corações, desenhei o modelo comercial pra força de vendas de 5.000 pessoas e conduzi o projeto Green Belt de inadimplência; antes, qualidade e processos na Mercer e na USIMINAS.</p>
+                        <h3 class="tl-title" data-key="t7-title">Base</h3>
+                        <p class="tl-text" data-key="t7-text">3 Corações (modelo comercial pra força de vendas de 5.000 pessoas; Green Belt de inadimplência) · Mercer · USIMINAS</p>
                     </article>
                 </div>
             </div>
@@ -868,40 +866,42 @@
                 'projects-lead': 'Resultado real e medido; o método Lean decide onde a IA e os dados entram.',
 
                 't1-period': '2025 — hoje',
-                't1-title': 'BP — A Beneficência Portuguesa',
-                't1-role': 'Especialista em Processos Lean · 4 hospitais públicos',
-                't1-text': 'Construí solo o app de gestão e setup de leitos, o pipeline de machine learning pra permanência prolongada e os dashboards em tempo real que rodam nos 4 hospitais; custo evitado estimado acima de R$200 mil/ano.',
-                't1-p1': '−20% setup de leitos', 't1-p2': 'AUC 0.688', 't1-p3': '+R$200 mil/ano',
+                't1-title': 'BP — Beneficência Portuguesa',
+                't1-role': 'Consultor',
+                't1-context': 'Consultor do Lean nas Emergências (PROADI-SUS, Ministério da Saúde): redução de superlotação e eficiência em hospitais públicos.',
+                't1-b1': 'Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: redução de 20% no tempo de setup',
+                't1-b2': 'Machine Learning pra predição de permanência prolongada (modelo calibrado, AUC 0.688)',
+                't1-b3': 'Dashboards de indicadores assistenciais e operacionais em tempo real',
+                't1-b4': 'Gestão visual no SUS: Kaizen A3, Kamishibai e Protocolo de Capacidade Plena',
                 'tl-live': 'No ar',
                 'tl-chip-leitos': 'Gestão de leitos', 'tl-chip-calc': 'Calculadora de leitos', 'tl-chip-cockpit': 'Cockpit de hospitais',
                 't2-period': '2024',
-                't2-title': 'Meta · Consultoria',
+                't2-title': 'Meta',
                 't2-role': 'Product Manager',
-                't2-text': 'Coordenei um squad de 8 pessoas e entreguei o produto de apontamento de horas usado por toda a companhia.',
-                't2-p1': '+900 usuários/dia', 't2-p2': '4,3/5 usabilidade', 't2-p3': '−50% rejeições de custo',
+                't2-context': 'Plataforma digital da jornada do colaborador.',
+                't2-b1': 'Squad de 8 pessoas; produto usado por toda a companhia: +900 usuários/dia, usabilidade 4,3/5',
+                't2-b2': 'Redução de 50% nas rejeições de custos no fechamento contábil',
                 't3-period': '2023 — 2025',
                 't3-title': 'CareOn Brasil',
-                't3-role': 'Professor',
-                't3-text': 'Estruturei e ministrei o curso de Experiência do Paciente e CX, traduzindo Lean e KPIs de satisfação pra prática de quem atende.',
-                't3-p1': '+100 alunos formados',
+                't3-role': 'Professor — Lean Healthcare & Experiência do Paciente',
+                't3-b1': 'Curso de Experiência do Paciente: mais de 100 profissionais de saúde formados',
                 't4-period': '2023 — 2024',
-                't4-title': 'SETA Desenvolvimento Gerencial',
-                't4-role': 'Consultor Lean · multissetor',
-                't4-text': 'Projetos de melhoria em Banco Fibra, VR Benefícios, Puravida e MRS: redução de lead time, ganho de acuracidade e savings em processos administrativos e operacionais.',
+                't4-title': 'SETA',
+                't4-role': 'Consultor de Processos e Performance',
+                't4-b1': 'Melhorias em Banco Fibra, VR Benefícios, Puravida e MRS Logística: redução de lead time, ganhos de acuracidade, savings e receita incremental',
                 't5-period': '2021 — 2023',
                 't5-title': 'Apex Group',
-                't5-role': 'Coordenador de Melhoria Contínua',
-                't5-text': 'Estruturei a nova área de atendimento ao cliente com pesquisa por clusters e estatística inferencial, e conduzi o carve-out MAF DTVM / Banco Modal.',
-                't5-p1': '3,4 → 4,1 satisfação', 't5-p2': '50+ iniciativas estratégicas',
+                't5-role': 'Coordenador de Processos e Performance',
+                't5-b1': 'Estruturei a área de Projetos & Qualidade; mais de 50 iniciativas estratégicas',
+                't5-b2': 'Satisfação de clientes de 3,4 pra 4,1; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex',
                 't6-period': '2017 — 2021',
                 't6-title': 'Dasa',
-                't6-role': 'Especialista → Coordenador de Melhoria Contínua',
-                't6-text': 'Facilitei e mentorei mais de 12 projetos de melhoria e liderei a governança de OKRs e KPIs de 30+ produtos digitais, com CAPEX de R$80M/ano e cerca de 14% de otimização.',
-                't6-p1': 'R$5M/ano em savings', 't6-p2': '57 squads', 't6-p3': '−14% CAPEX',
+                't6-role': 'Especialista → Coordenador',
+                't6-b1': 'Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, ~R$5M/ano em savings',
+                't6-b2': 'OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com ~14% de otimização',
                 't7-period': '2014 — 2017',
-                't7-title': '3 Corações · Mercer · USIMINAS',
-                't7-role': 'Base · Qualidade e Melhoria Contínua',
-                't7-text': 'Na 3 Corações, desenhei o modelo comercial pra força de vendas de 5.000 pessoas e conduzi o projeto Green Belt de inadimplência; antes, qualidade e processos na Mercer e na USIMINAS.',
+                't7-title': 'Base',
+                't7-text': '3 Corações (modelo comercial pra força de vendas de 5.000 pessoas; Green Belt de inadimplência) · Mercer · USIMINAS',
 
                 'about-eyebrow': 'Quem sou', 'about-me-header': 'Sobre mim',
                 'cred1': 'Black Belt & Green Belt Lean Six Sigma',
@@ -955,40 +955,42 @@
                 'projects-lead': 'Real, measured results; the Lean method decides where AI and data come in.',
 
                 't1-period': '2025 — today',
-                't1-title': 'BP — A Beneficência Portuguesa',
-                't1-role': 'Lean Process Specialist · 4 public hospitals',
-                't1-text': 'Built solo the bed setup and stay management app, the machine learning pipeline for prolonged length of stay and the real-time dashboards running across the 4 hospitals; estimated avoided cost above R$200K/year.',
-                't1-p1': '−20% bed setup', 't1-p2': 'AUC 0.688', 't1-p3': '+R$200K/yr',
+                't1-title': 'BP — Beneficência Portuguesa',
+                't1-role': 'Consultant',
+                't1-context': "Consultant for Lean in Emergency Care (PROADI-SUS, Brazil's Ministry of Health): reducing overcrowding and improving efficiency in public hospitals.",
+                't1-b1': 'Length-of-stay and bed setup management app, built with AI support: 20% reduction in setup time',
+                't1-b2': 'Machine Learning to predict prolonged length of stay (calibrated model, AUC 0.688)',
+                't1-b3': 'Real-time dashboards of clinical and operational indicators',
+                't1-b4': 'Visual management in SUS hospitals: A3 Kaizen, Kamishibai and Full Capacity Protocol',
                 'tl-live': 'Live',
                 'tl-chip-leitos': 'Bed management', 'tl-chip-calc': 'Bed calculator', 'tl-chip-cockpit': 'Hospitals cockpit',
                 't2-period': '2024',
-                't2-title': 'Meta · Consulting firm',
+                't2-title': 'Meta',
                 't2-role': 'Product Manager',
-                't2-text': 'Led an 8-person squad and delivered the time-tracking product used company-wide.',
-                't2-p1': '+900 users/day', 't2-p2': '4.3/5 usability', 't2-p3': '−50% cost rejections',
+                't2-context': 'Digital platform for the employee journey.',
+                't2-b1': '8-person squad; product used company-wide: +900 users/day, 4.3/5 usability',
+                't2-b2': '50% reduction in cost rejections at monthly close',
                 't3-period': '2023 — 2025',
                 't3-title': 'CareOn Brasil',
-                't3-role': 'Instructor',
-                't3-text': 'Designed and taught the Patient Experience and CX course, translating Lean and satisfaction KPIs into frontline practice.',
-                't3-p1': '+100 students trained',
+                't3-role': 'Instructor — Lean Healthcare & Patient Experience',
+                't3-b1': 'Patient Experience course: over 100 healthcare professionals trained',
                 't4-period': '2023 — 2024',
-                't4-title': 'SETA Desenvolvimento Gerencial',
-                't4-role': 'Lean Consultant · multi-industry',
-                't4-text': 'Improvement projects at Banco Fibra, VR Benefícios, Puravida and MRS: shorter lead times, accuracy gains and savings across administrative and operational processes.',
+                't4-title': 'SETA',
+                't4-role': 'Process & Performance Consultant',
+                't4-b1': 'Improvements at Banco Fibra, VR Benefícios, Puravida and MRS Logística: shorter lead times, accuracy gains, savings and incremental revenue',
                 't5-period': '2021 — 2023',
                 't5-title': 'Apex Group',
-                't5-role': 'Continuous Improvement Coordinator',
-                't5-text': 'Built the new customer service area with cluster-based research and inferential statistics, and ran the MAF DTVM / Banco Modal carve-out.',
-                't5-p1': '3.4 → 4.1 satisfaction', 't5-p2': '50+ strategic initiatives',
+                't5-role': 'Process & Performance Coordinator',
+                't5-b1': 'Built the Projects & Quality area; over 50 strategic initiatives',
+                't5-b2': 'Customer satisfaction from 3.4 to 4.1; MAF DTVM carve-out that enabled the acquisition by Apex',
                 't6-period': '2017 — 2021',
                 't6-title': 'Dasa',
-                't6-role': 'Specialist → Continuous Improvement Coordinator',
-                't6-text': 'Facilitated and mentored 12+ improvement projects and led OKR/KPI governance for 30+ digital products, with R$80M/year CAPEX and about 14% optimization.',
-                't6-p1': 'R$5M/yr in savings', 't6-p2': '57 squads', 't6-p3': '−14% CAPEX',
+                't6-role': 'Specialist → Coordinator',
+                't6-b1': 'Operational Excellence program (Lean + Agile): 12+ projects facilitated, ~R$5M/year in savings',
+                't6-b2': 'OKRs and KPIs for 30+ digital products across 57 squads; R$80M/year CAPEX with ~14% optimization',
                 't7-period': '2014 — 2017',
-                't7-title': '3 Corações · Mercer · USIMINAS',
-                't7-role': 'Foundation · Quality and Continuous Improvement',
-                't7-text': 'At 3 Corações, designed the commercial model for a 5,000-person sales force and ran the delinquency Green Belt project; before that, quality and process work at Mercer and USIMINAS.',
+                't7-title': 'Foundation',
+                't7-text': '3 Corações (commercial model for a 5,000-person sales force; delinquency Green Belt project) · Mercer · USIMINAS',
 
                 'about-eyebrow': 'Who I am', 'about-me-header': 'About me',
                 'cred1': 'Lean Six Sigma Black Belt & Green Belt',
