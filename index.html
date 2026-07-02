@@ -495,6 +495,12 @@
         .contact-card:active { transform: scale(0.97); }
         .contact-icon { color: var(--teal); line-height: 0; }
         .contact-icon svg { width: 26px; height: 26px; }
+        .contact-icon svg, .skill-card .ico svg, .cred > svg { transition: transform 650ms var(--ease-in-out); }
+        @media (hover: hover) and (pointer: fine) {
+            .contact-card:hover .contact-icon svg,
+            .skill-card:hover .ico svg,
+            .cred:hover > svg { transform: rotate(360deg); }
+        }
         .contact-card-wa .contact-icon { color: rgba(37, 211, 102, 0.55); } /* verde WhatsApp translúcido, discreto */
         .contact-card-wa:hover { border-color: rgba(37, 211, 102, 0.45); color: var(--text); }
         .contact-card-wa:hover .contact-icon { color: rgba(37, 211, 102, 0.9); }
@@ -1167,11 +1173,33 @@
                     track.style.transform = `translateX(-${slideW * idx}px)`;
                     indicators.forEach((ind, i) => { ind.classList.toggle('active', i === idx); ind.style.display = i <= maxIdx() ? '' : 'none'; });
                 }
-                nextBtn && nextBtn.addEventListener('click', () => { if (idx < maxIdx()) { idx++; update(); } });
-                prevBtn && prevBtn.addEventListener('click', () => { if (idx > 0) { idx--; update(); } });
-                indicators.forEach((ind, i) => ind.addEventListener('click', () => { idx = Math.min(i, maxIdx()); update(); }));
+                nextBtn && nextBtn.addEventListener('click', () => { if (idx < maxIdx()) { idx++; update(); } pauseThenResume(); });
+                prevBtn && prevBtn.addEventListener('click', () => { if (idx > 0) { idx--; update(); } pauseThenResume(); });
+                indicators.forEach((ind, i) => ind.addEventListener('click', () => { idx = Math.min(i, maxIdx()); update(); pauseThenResume(); }));
                 window.addEventListener('resize', update);
                 update();
+
+                // Autoplay em ping-pong (esquerda→direita→esquerda); pausa no hover e em interação manual
+                const carousel = document.querySelector('.recommendations-carousel');
+                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                let dir = 1, autoTimer = null, resumeTimer = null;
+                function tick() {
+                    if (maxIdx() === 0) return;
+                    if (idx >= maxIdx()) dir = -1;
+                    else if (idx <= 0) dir = 1;
+                    idx += dir;
+                    update();
+                }
+                function startAuto() { if (reduceMotion || autoTimer) return; autoTimer = setInterval(tick, 4500); }
+                function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
+                function pauseThenResume() { stopAuto(); clearTimeout(resumeTimer); resumeTimer = setTimeout(startAuto, 9000); }
+                if (carousel) {
+                    carousel.addEventListener('mouseenter', stopAuto);
+                    carousel.addEventListener('mouseleave', () => { clearTimeout(resumeTimer); startAuto(); });
+                    carousel.addEventListener('touchstart', pauseThenResume, { passive: true });
+                }
+                document.addEventListener('visibilitychange', () => { document.hidden ? stopAuto() : startAuto(); });
+                startAuto();
             }
         });
 
