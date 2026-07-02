@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pt">
 <head>
-    <title>Francisco Bahia Pena — Melhoria Contínua e IA Aplicada</title>
+    <title>Francisco Bahia Pena · Melhoria Contínua e IA Aplicada</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Página profissional de Francisco Bahia Pena. Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais." />
@@ -10,7 +10,7 @@
     <link rel="canonical" href="https://portfolio-liard-tau-ywgbdxtfhx.vercel.app" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Francisco Bahia Pena — Melhoria Contínua e IA Aplicada" />
+    <meta property="og:title" content="Francisco Bahia Pena · Melhoria Contínua e IA Aplicada" />
     <meta property="og:description" content="Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portfolio-liard-tau-ywgbdxtfhx.vercel.app" />
@@ -18,7 +18,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Francisco Bahia Pena — Melhoria Contínua e IA Aplicada" />
+    <meta name="twitter:title" content="Francisco Bahia Pena · Melhoria Contínua e IA Aplicada" />
     <meta name="twitter:description" content="Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais." />
     <meta name="twitter:image" content="https://portfolio-liard-tau-ywgbdxtfhx.vercel.app/images/og-hero.jpg" />
 
@@ -307,10 +307,11 @@
             background: linear-gradient(180deg, rgba(5,17,26,0) 45%, rgba(5,17,26,0.55) 100%);
         }
         .hero-portrait .tag {
-            position: absolute; left: 1rem; bottom: 1rem; z-index: 2;
+            position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2;
             font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em;
             color: var(--peak); background: rgba(5,17,26,0.6); backdrop-filter: blur(6px);
-            border: 1px solid var(--line); padding: 0.4rem 0.7rem; border-radius: 999px;
+            border: 1px solid var(--line); padding: 0.45rem 0.9rem; border-radius: var(--radius-sm);
+            text-align: center; line-height: 1.6;
         }
         .hero-portrait .halo {
             position: absolute; inset: -12% -12% -12% -12%; z-index: -1;
@@ -320,6 +321,7 @@
 
         @media screen and (max-width: 900px) {
             .hero-grid { grid-template-columns: 1fr; gap: 2.75rem; }
+            .hero-portrait .tag { font-size: 0.66rem; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
         }
 
         /* ======================================
@@ -356,6 +358,7 @@
             content: ''; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px;
             border-radius: 50%; background: var(--teal); opacity: 0.7;
         }
+        .tl-bullets strong { color: var(--text); font-weight: 600; }
         .tl-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.95rem; }
         .tl-live {
             font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em;
@@ -522,8 +525,8 @@
                 <nav id="nav-main" class="nav-main" role="navigation" aria-label="Principal">
                     <ul class="nav-links">
                         <li><a href="#about-me" class="nav-link" data-key="nav-about">Sobre</a></li>
-                        <li><a href="#projects" class="nav-link" data-key="nav-projects">Resultados</a></li>
                         <li><a href="#recommendations" class="nav-link" data-key="nav-recommendations">Recomendações</a></li>
+                        <li><a href="#projects" class="nav-link" data-key="nav-projects">Resultados</a></li>
                         <li><a href="#skills" class="nav-link" data-key="nav-skills">Habilidades</a></li>
                         <li><a href="#contact" class="nav-link" data-key="nav-contact">Contato</a></li>
                     </ul>
@@ -548,11 +551,10 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
-                        <span class="eyebrow" data-stagger="1" data-key="hero-eyebrow">Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais</span>
-                        <h1 class="hero-title" data-stagger="2">
+                        <h1 class="hero-title" data-stagger="1">
                             <span data-key="welcome-text">IA e Lean aplicados pra escalar eficiência em operações reais.</span>
                         </h1>
-                        <div class="hero-actions" data-stagger="3">
+                        <div class="hero-actions" data-stagger="2">
                             <a href="#projects" class="btn btn-primary"><span data-key="cta-projects">Ver resultados</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
                             <button class="voice-btn" id="voice-btn" aria-label="Ouvir apresentação na minha voz" aria-pressed="false">
                                 <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -560,7 +562,7 @@
                             </button>
                             <audio id="hero-audio" src="assets/hero-vo.mp3" preload="none"></audio>
                         </div>
-                        <div class="hero-metrics" data-stagger="4">
+                        <div class="hero-metrics" data-stagger="3">
                             <div class="metric metric-hero">
                                 <div class="num">R$<span class="u">5</span>M<span class="u">/ano</span></div>
                                 <div class="lbl" data-key="metric1">economia em projetos Lean facilitados</div>
@@ -575,7 +577,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero-portrait" data-stagger="3">
+                    <div class="hero-portrait" data-stagger="2">
                         <div class="halo" aria-hidden="true"></div>
                         <div class="frame">
                             <img src="assets/palco-original.jpg" alt="Francisco Bahia Pena palestrando" loading="eager">
@@ -591,11 +593,10 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-text reveal">
-                        <span class="eyebrow" data-key="about-eyebrow">Prazer</span>
                         <h2 class="section-title" data-key="about-me-header">Sobre mim</h2>
-                        <p data-key="about-me-text1">Há mais de 10 anos trabalho com eficiência operacional. Comecei na engenharia metalúrgica (UFOP) e passei por qualidade e melhoria contínua na Usiminas, Mercer, 3 Corações e Dasa.</p>
-                        <p data-key="about-me-text2">Nos últimos anos juntei o método com tecnologia: liderei a governança de dezenas de produtos digitais com KPIs e OKRs em <strong>57 squads</strong>, fui <strong>Product Manager na consultoria Meta</strong> liderando um produto usado por toda a companhia, e hoje atuo como consultor de processos e IA na saúde pública pelo PROADI-SUS, levando Lean pras emergências do SUS.</p>
-                        <p data-key="about-me-text3">O que me move é usar o <strong>método pra decidir onde a IA entra</strong>. Construo as ferramentas eu mesmo — sozinho, com IA e low-code — e deixo o resultado aparecer no indicador.</p>
+                        <p data-key="about-me-text1">Atuo há mais de 10 anos em eficiência operacional, unindo <strong>Lean Six Sigma, Ciência de Dados, IA e soluções digitais</strong> pra gerar resultado mensurável em saúde, indústria, tecnologia e serviços.</p>
+                        <p data-key="about-me-text2">Passei por Usiminas, Mercer, 3 Corações e Dasa, onde liderei a governança de produtos digitais com KPIs e OKRs em <strong>57 squads</strong>. Fui <strong>Product Manager na consultoria Meta</strong> e hoje sou consultor de processos e IA na saúde pública pelo PROADI-SUS, levando Lean pras emergências do SUS.</p>
+                        <p data-key="about-me-text3"><strong>Formação:</strong> Pós em Analytics e IA (FIA), Ciência de Dados (Comunidade DS), Pós em Qualidade e Produtividade (USP) e Engenharia (UFOP).</p>
                     </div>
                     <div class="creds reveal">
                         <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg><span data-key="cred1">Black Belt & Green Belt Lean Six Sigma</span></div>
@@ -604,93 +605,6 @@
                         <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span>Pós em Qualidade e Produtividade · USP</span></div>
                         <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg><span data-key="cred4">Consultor Lean & IA · PROADI-SUS</span></div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== Resultados na prática (timeline) ===================== -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <div class="section-head">
-                    <span class="eyebrow" data-key="projects-eyebrow">Trajetória</span>
-                    <h2 class="section-title" data-key="projects-header">Resultados na prática</h2>
-                    <p data-key="projects-lead">Resultado real e medido; o método Lean decide onde a IA e os dados entram.</p>
-                </div>
-
-                <div class="timeline">
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t1-period">2025 — hoje</p>
-                        <h3 class="tl-title" data-key="t1-title">BP — Beneficência Portuguesa</h3>
-                        <p class="tl-role" data-key="t1-role">Consultor</p>
-                        <p class="tl-context" data-key="t1-context">Consultor do Lean nas Emergências (PROADI-SUS, Ministério da Saúde): redução de superlotação e eficiência em hospitais públicos.</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t1-b1">Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: redução de 20% no tempo de setup</li>
-                            <li data-key="t1-b2">Machine Learning pra predição de permanência prolongada (modelo calibrado, AUC 0.688)</li>
-                            <li data-key="t1-b3">Dashboards de indicadores assistenciais e operacionais em tempo real</li>
-                            <li data-key="t1-b4">Gestão visual no SUS: Kaizen A3, Kamishibai e Protocolo de Capacidade Plena</li>
-                        </ul>
-                        <div class="tl-links">
-                            <span class="tl-live" data-key="tl-live">No ar</span>
-                            <a class="tl-link" href="https://hmsa-leitos.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-leitos">Gestão de leitos</a>
-                            <a class="tl-link" href="https://bed-blossom.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-calc">Calculadora de leitos</a>
-                            <a class="tl-link" href="https://gestao-lean-ia-hospitais.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-cockpit">Cockpit de hospitais</a>
-                        </div>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t2-period">2024</p>
-                        <h3 class="tl-title" data-key="t2-title">Meta</h3>
-                        <p class="tl-role" data-key="t2-role">Product Manager</p>
-                        <p class="tl-context" data-key="t2-context">Plataforma digital da jornada do colaborador.</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t2-b1">Squad de 8 pessoas; produto usado por toda a companhia: +900 usuários/dia, usabilidade 4,3/5</li>
-                            <li data-key="t2-b2">Redução de 50% nas rejeições de custos no fechamento contábil</li>
-                        </ul>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t3-period">2023 — 2025</p>
-                        <h3 class="tl-title" data-key="t3-title">CareOn Brasil</h3>
-                        <p class="tl-role" data-key="t3-role">Professor — Lean Healthcare & Experiência do Paciente</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t3-b1">Curso de Experiência do Paciente: mais de 100 profissionais de saúde formados</li>
-                        </ul>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t4-period">2023 — 2024</p>
-                        <h3 class="tl-title" data-key="t4-title">SETA</h3>
-                        <p class="tl-role" data-key="t4-role">Consultor de Processos e Performance</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t4-b1">Melhorias em Banco Fibra, VR Benefícios, Puravida e MRS Logística: redução de lead time, ganhos de acuracidade, savings e receita incremental</li>
-                        </ul>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t5-period">2021 — 2023</p>
-                        <h3 class="tl-title" data-key="t5-title">Apex Group</h3>
-                        <p class="tl-role" data-key="t5-role">Coordenador de Processos e Performance</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t5-b1">Estruturei a área de Projetos &amp; Qualidade; mais de 50 iniciativas estratégicas</li>
-                            <li data-key="t5-b2">Satisfação de clientes de 3,4 pra 4,1; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex</li>
-                        </ul>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t6-period">2017 — 2021</p>
-                        <h3 class="tl-title" data-key="t6-title">Dasa</h3>
-                        <p class="tl-role" data-key="t6-role">Especialista → Coordenador</p>
-                        <ul class="tl-bullets">
-                            <li data-key="t6-b1">Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, ~R$5M/ano em savings</li>
-                            <li data-key="t6-b2">OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com ~14% de otimização</li>
-                        </ul>
-                    </article>
-
-                    <article class="tl-item reveal">
-                        <p class="tl-period" data-key="t7-period">2014 — 2017</p>
-                        <h3 class="tl-title" data-key="t7-title">Base</h3>
-                        <p class="tl-text" data-key="t7-text">3 Corações (modelo comercial pra força de vendas de 5.000 pessoas; Green Belt de inadimplência) · Mercer · USIMINAS</p>
-                    </article>
                 </div>
             </div>
         </section>
@@ -757,6 +671,96 @@
                         <button class="indicator" aria-label="Recomendação 5 de 6"></button>
                         <button class="indicator" aria-label="Recomendação 6 de 6"></button>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== Resultados na prática (timeline) ===================== -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow" data-key="projects-eyebrow">Trajetória</span>
+                    <h2 class="section-title" data-key="projects-header">Resultados na prática</h2>
+                    <p data-key="projects-lead">Resultado real e medido; o método Lean decide onde a IA e os dados entram.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t1-period">2025 - hoje</p>
+                        <h3 class="tl-title" data-key="t1-title">BP · Beneficência Portuguesa</h3>
+                        <p class="tl-role" data-key="t1-role">Consultor</p>
+                        <p class="tl-context" data-key="t1-context">Consultor do Lean nas Emergências (PROADI-SUS, Ministério da Saúde): redução de superlotação e eficiência em hospitais públicos.</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t1-b1">Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: <strong>redução de 20% no tempo de setup</strong></li>
+                            <li data-key="t1-b2">Machine Learning pra predição de permanência prolongada (modelo calibrado, AUC 0.688)</li>
+                            <li data-key="t1-b3">Dashboards de indicadores assistenciais e operacionais em tempo real</li>
+                            <li data-key="t1-b4">Gestão visual no SUS: Kaizen A3, Kamishibai e Protocolo de Capacidade Plena</li>
+                        </ul>
+                        <div class="tl-links">
+                            <span class="tl-live" data-key="tl-live">No ar</span>
+                            <a class="tl-link" href="https://hmsa-leitos.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-leitos">Gestão de leitos</a>
+                            <a class="tl-link" href="https://bed-blossom.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-calc">Calculadora de leitos</a>
+                            <a class="tl-link" href="https://gestao-lean-ia-hospitais.vercel.app" target="_blank" rel="noopener noreferrer" data-key="tl-chip-cockpit">Cockpit de hospitais</a>
+                        </div>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t2-period">2024</p>
+                        <h3 class="tl-title" data-key="t2-title">Meta</h3>
+                        <p class="tl-role" data-key="t2-role">Product Manager</p>
+                        <p class="tl-context" data-key="t2-context">Plataforma digital da jornada do colaborador.</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t2-b1">Squad de 8 pessoas; produto usado por toda a companhia: <strong>+900 usuários/dia</strong>, usabilidade 4,3/5</li>
+                            <li data-key="t2-b2"><strong>Redução de 50%</strong> nas rejeições de custos no fechamento contábil</li>
+                        </ul>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t3-period">2023 - 2025</p>
+                        <h3 class="tl-title" data-key="t3-title">CareOn Brasil</h3>
+                        <p class="tl-role" data-key="t3-role">Professor · Lean Healthcare & Experiência do Paciente</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t3-b1">Curso de Experiência do Paciente: <strong>mais de 100 profissionais de saúde formados</strong></li>
+                        </ul>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t4-period">2023 - 2024</p>
+                        <h3 class="tl-title" data-key="t4-title">SETA</h3>
+                        <p class="tl-role" data-key="t4-role">Consultor de Processos e Performance</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t4-b1">Melhorias em Banco Fibra, VR Benefícios, Puravida e MRS Logística: redução de lead time, ganhos de acuracidade, savings e receita incremental</li>
+                        </ul>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t5-period">2021 - 2023</p>
+                        <h3 class="tl-title" data-key="t5-title">Apex Group</h3>
+                        <p class="tl-role" data-key="t5-role">Coordenador de Processos e Performance</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t5-b1">Estruturei a área de Projetos &amp; Qualidade; mais de 50 iniciativas estratégicas</li>
+                            <li data-key="t5-b2">Satisfação de clientes de <strong>3,4 pra 4,1</strong>; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex</li>
+                        </ul>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t6-period">2017 - 2021</p>
+                        <h3 class="tl-title" data-key="t6-title">Dasa</h3>
+                        <p class="tl-role" data-key="t6-role">Especialista → Coordenador</p>
+                        <ul class="tl-bullets">
+                            <li data-key="t6-b1">Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, <strong>~R$5M/ano em savings</strong></li>
+                            <li data-key="t6-b2">OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com <strong>~14% de otimização</strong></li>
+                        </ul>
+                    </article>
+
+                    <article class="tl-item reveal">
+                        <p class="tl-period" data-key="t7-period">2014 - 2017</p>
+                        <h3 class="tl-title" data-key="t7-title">Base</h3>
+                        <ul class="tl-bullets">
+                            <li data-key="t7-b1">3 Corações: modelo comercial pra força de vendas de <strong>5.000 pessoas</strong> e Green Belt de inadimplência</li>
+                            <li data-key="t7-b2">Início em qualidade e melhoria contínua na Mercer e na Usiminas</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
@@ -867,7 +871,6 @@
                 'nav-projects': 'Resultados', 'nav-about': 'Sobre', 'nav-recommendations': 'Recomendações',
                 'nav-skills': 'Habilidades', 'nav-contact': 'Contato',
 
-                'hero-eyebrow': 'Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais',
                 'welcome-text': 'IA e Lean aplicados pra escalar eficiência em operações reais.',
                 'hero-badge': 'Melhoria Contínua e IA Aplicada · Black Belt · Soluções Digitais',
                 'cta-projects': 'Ver resultados',
@@ -881,11 +884,11 @@
                 'projects-header': 'Resultados na prática',
                 'projects-lead': 'Resultado real e medido; o método Lean decide onde a IA e os dados entram.',
 
-                't1-period': '2025 — hoje',
-                't1-title': 'BP — Beneficência Portuguesa',
+                't1-period': '2025 - hoje',
+                't1-title': 'BP · Beneficência Portuguesa',
                 't1-role': 'Consultor',
                 't1-context': 'Consultor do Lean nas Emergências (PROADI-SUS, Ministério da Saúde): redução de superlotação e eficiência em hospitais públicos.',
-                't1-b1': 'Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: redução de 20% no tempo de setup',
+                't1-b1': 'Aplicativo de gestão de permanência e setup de leitos, desenvolvido com apoio de IA: <strong>redução de 20% no tempo de setup</strong>',
                 't1-b2': 'Machine Learning pra predição de permanência prolongada (modelo calibrado, AUC 0.688)',
                 't1-b3': 'Dashboards de indicadores assistenciais e operacionais em tempo real',
                 't1-b4': 'Gestão visual no SUS: Kaizen A3, Kamishibai e Protocolo de Capacidade Plena',
@@ -895,38 +898,39 @@
                 't2-title': 'Meta',
                 't2-role': 'Product Manager',
                 't2-context': 'Plataforma digital da jornada do colaborador.',
-                't2-b1': 'Squad de 8 pessoas; produto usado por toda a companhia: +900 usuários/dia, usabilidade 4,3/5',
-                't2-b2': 'Redução de 50% nas rejeições de custos no fechamento contábil',
-                't3-period': '2023 — 2025',
+                't2-b1': 'Squad de 8 pessoas; produto usado por toda a companhia: <strong>+900 usuários/dia</strong>, usabilidade 4,3/5',
+                't2-b2': '<strong>Redução de 50%</strong> nas rejeições de custos no fechamento contábil',
+                't3-period': '2023 - 2025',
                 't3-title': 'CareOn Brasil',
-                't3-role': 'Professor — Lean Healthcare & Experiência do Paciente',
-                't3-b1': 'Curso de Experiência do Paciente: mais de 100 profissionais de saúde formados',
-                't4-period': '2023 — 2024',
+                't3-role': 'Professor · Lean Healthcare & Experiência do Paciente',
+                't3-b1': 'Curso de Experiência do Paciente: <strong>mais de 100 profissionais de saúde formados</strong>',
+                't4-period': '2023 - 2024',
                 't4-title': 'SETA',
                 't4-role': 'Consultor de Processos e Performance',
                 't4-b1': 'Melhorias em Banco Fibra, VR Benefícios, Puravida e MRS Logística: redução de lead time, ganhos de acuracidade, savings e receita incremental',
-                't5-period': '2021 — 2023',
+                't5-period': '2021 - 2023',
                 't5-title': 'Apex Group',
                 't5-role': 'Coordenador de Processos e Performance',
                 't5-b1': 'Estruturei a área de Projetos & Qualidade; mais de 50 iniciativas estratégicas',
-                't5-b2': 'Satisfação de clientes de 3,4 pra 4,1; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex',
-                't6-period': '2017 — 2021',
+                't5-b2': 'Satisfação de clientes de <strong>3,4 pra 4,1</strong>; carve-out da MAF DTVM que viabilizou a aquisição pelo Apex',
+                't6-period': '2017 - 2021',
                 't6-title': 'Dasa',
                 't6-role': 'Especialista → Coordenador',
-                't6-b1': 'Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, ~R$5M/ano em savings',
-                't6-b2': 'OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com ~14% de otimização',
-                't7-period': '2014 — 2017',
+                't6-b1': 'Programa de Excelência Operacional (Lean + Ágil): 12+ projetos facilitados, <strong>~R$5M/ano em savings</strong>',
+                't6-b2': 'OKRs e KPIs de 30+ produtos digitais em 57 squads; CAPEX de R$80M/ano com <strong>~14% de otimização</strong>',
+                't7-period': '2014 - 2017',
                 't7-title': 'Base',
-                't7-text': '3 Corações (modelo comercial pra força de vendas de 5.000 pessoas; Green Belt de inadimplência) · Mercer · USIMINAS',
+                't7-b1': '3 Corações: modelo comercial pra força de vendas de <strong>5.000 pessoas</strong> e Green Belt de inadimplência',
+                't7-b2': 'Início em qualidade e melhoria contínua na Mercer e na Usiminas',
 
-                'about-eyebrow': 'Prazer', 'about-me-header': 'Sobre mim',
+                'about-me-header': 'Sobre mim',
                 'cred1': 'Black Belt & Green Belt Lean Six Sigma',
                 'cred2': 'PMP · Scrum (PSM) · Kanban (KMP) · OKR',
                 'cred3': 'Pós em Analytics & IA (FIA) + Data Science',
                 'cred4': 'Consultor Lean & IA · PROADI-SUS',
-                'about-me-text1': 'Há mais de 10 anos trabalho com eficiência operacional. Comecei na engenharia metalúrgica (UFOP) e passei por qualidade e melhoria contínua na Usiminas, Mercer, 3 Corações e Dasa.',
-                'about-me-text2': 'Nos últimos anos juntei o método com tecnologia: liderei a governança de dezenas de produtos digitais com KPIs e OKRs em <strong>57 squads</strong>, fui <strong>Product Manager na consultoria Meta</strong> liderando um produto usado por toda a companhia, e hoje atuo como consultor de processos e IA na saúde pública pelo PROADI-SUS, levando Lean pras emergências do SUS.',
-                'about-me-text3': 'O que me move é usar o <strong>método pra decidir onde a IA entra</strong>. Construo as ferramentas eu mesmo — sozinho, com IA e low-code — e deixo o resultado aparecer no indicador.',
+                'about-me-text1': 'Atuo há mais de 10 anos em eficiência operacional, unindo <strong>Lean Six Sigma, Ciência de Dados, IA e soluções digitais</strong> pra gerar resultado mensurável em saúde, indústria, tecnologia e serviços.',
+                'about-me-text2': 'Passei por Usiminas, Mercer, 3 Corações e Dasa, onde liderei a governança de produtos digitais com KPIs e OKRs em <strong>57 squads</strong>. Fui <strong>Product Manager na consultoria Meta</strong> e hoje sou consultor de processos e IA na saúde pública pelo PROADI-SUS, levando Lean pras emergências do SUS.',
+                'about-me-text3': '<strong>Formação:</strong> Pós em Analytics e IA (FIA), Ciência de Dados (Comunidade DS), Pós em Qualidade e Produtividade (USP) e Engenharia (UFOP).',
 
                 'rec-eyebrow': 'O que dizem', 'recommendations-header': 'Recomendações',
                 'recommendation1-text': '"Desde o início, Francisco se destacou pela visão estratégica e pela capacidade de alinhar as necessidades dos stakeholders. Um dos aspectos mais notáveis é a habilidade de identificar e solucionar problemas rapidamente. A proatividade e a dedicação dele foram fundamentais para superar os desafios."',
@@ -956,7 +960,6 @@
                 'nav-projects': 'Results', 'nav-about': 'About', 'nav-recommendations': 'Recommendations',
                 'nav-skills': 'Skills', 'nav-contact': 'Contact',
 
-                'hero-eyebrow': 'Continuous Improvement & Applied AI Specialist | Lean Six Sigma Black Belt | Digital Solutions',
                 'welcome-text': 'AI and Lean applied to scale efficiency in real operations.',
                 'hero-badge': 'Continuous Improvement & Applied AI · Black Belt · Digital Solutions',
                 'cta-projects': 'See results',
@@ -970,11 +973,11 @@
                 'projects-header': 'Results in practice',
                 'projects-lead': 'Real, measured results; the Lean method decides where AI and data come in.',
 
-                't1-period': '2025 — today',
-                't1-title': 'BP — Beneficência Portuguesa',
+                't1-period': '2025 - today',
+                't1-title': 'BP · Beneficência Portuguesa',
                 't1-role': 'Consultant',
                 't1-context': "Consultant for Lean in Emergency Care (PROADI-SUS, Brazil's Ministry of Health): reducing overcrowding and improving efficiency in public hospitals.",
-                't1-b1': 'Length-of-stay and bed setup management app, built with AI support: 20% reduction in setup time',
+                't1-b1': 'Length-of-stay and bed setup management app, built with AI support: <strong>20% reduction in setup time</strong>',
                 't1-b2': 'Machine Learning to predict prolonged length of stay (calibrated model, AUC 0.688)',
                 't1-b3': 'Real-time dashboards of clinical and operational indicators',
                 't1-b4': 'Visual management in SUS hospitals: A3 Kaizen, Kamishibai and Full Capacity Protocol',
@@ -984,38 +987,39 @@
                 't2-title': 'Meta',
                 't2-role': 'Product Manager',
                 't2-context': 'Digital platform for the employee journey.',
-                't2-b1': '8-person squad; product used company-wide: +900 users/day, 4.3/5 usability',
-                't2-b2': '50% reduction in cost rejections at monthly close',
-                't3-period': '2023 — 2025',
+                't2-b1': '8-person squad; product used company-wide: <strong>+900 users/day</strong>, 4.3/5 usability',
+                't2-b2': '<strong>50% reduction</strong> in cost rejections at monthly close',
+                't3-period': '2023 - 2025',
                 't3-title': 'CareOn Brasil',
-                't3-role': 'Instructor — Lean Healthcare & Patient Experience',
-                't3-b1': 'Patient Experience course: over 100 healthcare professionals trained',
-                't4-period': '2023 — 2024',
+                't3-role': 'Instructor · Lean Healthcare & Patient Experience',
+                't3-b1': 'Patient Experience course: <strong>over 100 healthcare professionals trained</strong>',
+                't4-period': '2023 - 2024',
                 't4-title': 'SETA',
                 't4-role': 'Process & Performance Consultant',
                 't4-b1': 'Improvements at Banco Fibra, VR Benefícios, Puravida and MRS Logística: shorter lead times, accuracy gains, savings and incremental revenue',
-                't5-period': '2021 — 2023',
+                't5-period': '2021 - 2023',
                 't5-title': 'Apex Group',
                 't5-role': 'Process & Performance Coordinator',
                 't5-b1': 'Built the Projects & Quality area; over 50 strategic initiatives',
-                't5-b2': 'Customer satisfaction from 3.4 to 4.1; MAF DTVM carve-out that enabled the acquisition by Apex',
-                't6-period': '2017 — 2021',
+                't5-b2': 'Customer satisfaction from <strong>3.4 to 4.1</strong>; MAF DTVM carve-out that enabled the acquisition by Apex',
+                't6-period': '2017 - 2021',
                 't6-title': 'Dasa',
                 't6-role': 'Specialist → Coordinator',
-                't6-b1': 'Operational Excellence program (Lean + Agile): 12+ projects facilitated, ~R$5M/year in savings',
-                't6-b2': 'OKRs and KPIs for 30+ digital products across 57 squads; R$80M/year CAPEX with ~14% optimization',
-                't7-period': '2014 — 2017',
+                't6-b1': 'Operational Excellence program (Lean + Agile): 12+ projects facilitated, <strong>~R$5M/year in savings</strong>',
+                't6-b2': 'OKRs and KPIs for 30+ digital products across 57 squads; R$80M/year CAPEX with <strong>~14% optimization</strong>',
+                't7-period': '2014 - 2017',
                 't7-title': 'Foundation',
-                't7-text': '3 Corações (commercial model for a 5,000-person sales force; delinquency Green Belt project) · Mercer · USIMINAS',
+                't7-b1': '3 Corações: commercial model for a <strong>5,000-person sales force</strong> and a delinquency Green Belt project',
+                't7-b2': 'Early career in quality and continuous improvement at Mercer and Usiminas',
 
-                'about-eyebrow': 'Nice to meet you', 'about-me-header': 'About me',
+                'about-me-header': 'About me',
                 'cred1': 'Lean Six Sigma Black Belt & Green Belt',
                 'cred2': 'PMP · Scrum (PSM) · Kanban (KMP) · OKR',
                 'cred3': 'Postgrad in Analytics & AI (FIA) + Data Science',
                 'cred4': 'Lean & AI Consultant · PROADI-SUS',
-                'about-me-text1': "For over 10 years I've worked on operational efficiency. I started in metallurgical engineering (UFOP) and moved through quality and continuous improvement at Usiminas, Mercer, 3 Corações and Dasa.",
-                'about-me-text2': 'In recent years I combined method with technology: I led the governance of dozens of digital products with KPIs and OKRs across <strong>57 squads</strong>, I was a <strong>Product Manager at Meta, a Brazilian consulting firm</strong>, leading a product used company-wide, and today I work as a process and AI consultant in public health through PROADI-SUS, bringing Lean to the emergency rooms of SUS hospitals.',
-                'about-me-text3': 'What drives me is using the <strong>method to decide where AI goes</strong>. I build the tools myself — solo, with AI and low-code — and let the result show in the metric.',
+                'about-me-text1': 'For over 10 years I have worked in operational efficiency, combining <strong>Lean Six Sigma, Data Science, AI and digital solutions</strong> to deliver measurable results in healthcare, industry, technology and services.',
+                'about-me-text2': 'I came up through Usiminas, Mercer, 3 Corações and Dasa, where I led the governance of digital products with KPIs and OKRs across <strong>57 squads</strong>. I was a <strong>Product Manager at Meta, a Brazilian consulting firm</strong>, and today I am a process and AI consultant in public health through PROADI-SUS, bringing Lean to SUS emergency rooms.',
+                'about-me-text3': '<strong>Education:</strong> Postgrad in Analytics & AI (FIA), Data Science (Comunidade DS), Postgrad in Quality & Productivity (USP) and Engineering (UFOP).',
 
                 'rec-eyebrow': 'What people say', 'recommendations-header': 'Recommendations',
                 'recommendation1-text': '"From the beginning, Francisco stood out for his strategic vision and ability to align stakeholder needs. One of his most notable traits is quickly identifying and solving problems. His proactivity and dedication were fundamental to overcoming challenges."',
