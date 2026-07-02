@@ -64,7 +64,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: calc(var(--header-height) + 1rem); }
+        html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: calc(var(--header-height) + 1rem); color-scheme: dark; }
 
         body {
             font-family: var(--font-body);
@@ -125,6 +125,7 @@
         .section-title {
             font-family: var(--font-display);
             font-weight: 800;
+            text-wrap: balance;
             font-size: clamp(1.8rem, 3.2vw, 2.6rem);
             color: var(--text);
             letter-spacing: -0.02em;
@@ -142,6 +143,13 @@
             position: absolute; width: 1px; height: 1px; padding: 0;
             margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
         }
+
+        .skip-link {
+            position: absolute; left: -9999px; top: 0; z-index: 2000;
+            background: var(--teal); color: var(--bg); font-weight: 600;
+            padding: 0.6rem 1.1rem; border-radius: 0 0 10px 0; text-decoration: none;
+        }
+        .skip-link:focus { left: 0; }
 
         /* ======================================
            Header / Nav
@@ -239,12 +247,10 @@
             font-family: var(--font-display); font-weight: 900;
             font-size: clamp(2.3rem, 5.2vw, 4rem); line-height: 1.04;
             letter-spacing: -0.03em; color: var(--text); margin: 1.4rem 0 0;
+            text-wrap: balance;
         }
         .hero-title .hl { color: var(--teal); }
-        .hero-intro {
-            font-size: 1.12rem; color: var(--text-dim); margin-top: 1.5rem; max-width: 34rem;
-        }
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.1rem; align-items: center; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.4rem; align-items: center; }
 
         .btn {
             display: inline-flex; align-items: center; gap: 0.6rem;
@@ -427,7 +433,7 @@
         .indicator {
             width: 24px; height: 24px; padding: 8.5px; border-radius: 50%; border: none; cursor: pointer;
             background-color: var(--muted); background-clip: content-box; opacity: 0.35;
-            transition: all 200ms var(--ease-out);
+            transition: opacity 200ms var(--ease-out), background-color 200ms var(--ease-out), transform 200ms var(--ease-out);
         }
         .indicator.active { opacity: 1; background-color: var(--teal); transform: scale(1.15); }
 
@@ -470,7 +476,9 @@
             background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
             color: var(--text-dim); transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out), color 200ms var(--ease-out);
         }
-        .contact-card:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-4px); }
+        @media (hover: hover) and (pointer: fine) {
+            .contact-card:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-4px); }
+        }
         .contact-card:active { transform: scale(0.97); }
         .contact-icon { color: var(--teal); line-height: 0; }
         .contact-icon svg { width: 26px; height: 26px; }
@@ -505,6 +513,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#hero" data-key="skip-link">Pular pro conteúdo</a>
     <div class="main-container">
         <!-- ===================== Header ===================== -->
         <header id="header">
@@ -543,10 +552,7 @@
                         <h1 class="hero-title" data-stagger="2">
                             <span data-key="welcome-text">IA e Lean aplicados pra escalar eficiência em operações reais.</span>
                         </h1>
-                        <p class="hero-intro" data-stagger="3" data-key="intro-text">
-                            Essa é a minha página profissional. Aqui você conhece um pouco mais sobre mim e sobre o que venho transformando junto com as pessoas: com inteligência artificial, soluções digitais, métodos de resolução de problemas como o Lean, e gestão de projetos que combina práticas ágeis e híbridas do PMBOK.
-                        </p>
-                        <div class="hero-actions" data-stagger="4">
+                        <div class="hero-actions" data-stagger="3">
                             <a href="#projects" class="btn btn-primary"><span data-key="cta-projects">Ver resultados</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
                             <button class="voice-btn" id="voice-btn" aria-label="Ouvir apresentação na minha voz" aria-pressed="false">
                                 <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -554,7 +560,7 @@
                             </button>
                             <audio id="hero-audio" src="assets/hero-vo.mp3" preload="none"></audio>
                         </div>
-                        <div class="hero-metrics" data-stagger="5">
+                        <div class="hero-metrics" data-stagger="4">
                             <div class="metric metric-hero">
                                 <div class="num">R$<span class="u">5</span>M<span class="u">/ano</span></div>
                                 <div class="lbl" data-key="metric1">economia em projetos Lean facilitados</div>
@@ -849,7 +855,7 @@
 
         <footer class="footer">
             <div class="container">
-                <p>© 2026 Francisco Pena · IA + Lean</p>
+                <p>© 2026 Francisco Bahia Pena · Melhoria Contínua e IA Aplicada</p>
             </div>
         </footer>
     </div>
@@ -863,10 +869,10 @@
 
                 'hero-eyebrow': 'Especialista em Melhoria Contínua e IA Aplicada | Lean Six Sigma Black Belt | Soluções Digitais',
                 'welcome-text': 'IA e Lean aplicados pra escalar eficiência em operações reais.',
-                'intro-text': 'Essa é a minha página profissional. Aqui você conhece um pouco mais sobre mim e sobre o que venho transformando junto com as pessoas: com inteligência artificial, soluções digitais, métodos de resolução de problemas como o Lean, e gestão de projetos que combina práticas ágeis e híbridas do PMBOK.',
                 'hero-badge': 'Melhoria Contínua e IA Aplicada · Black Belt · Soluções Digitais',
                 'cta-projects': 'Ver resultados',
                 'voice-play': 'OUÇA NA MINHA VOZ', 'voice-pause': 'PAUSAR',
+                'skip-link': 'Pular pro conteúdo',
                 'metric1': 'economia em projetos Lean facilitados',
                 'metric2': 'tempo de setup, app feito solo com IA',
                 'metric3': 'squads com KPIs e OKRs sob governança',
@@ -952,10 +958,10 @@
 
                 'hero-eyebrow': 'Continuous Improvement & Applied AI Specialist | Lean Six Sigma Black Belt | Digital Solutions',
                 'welcome-text': 'AI and Lean applied to scale efficiency in real operations.',
-                'intro-text': "This is my professional page. Here you'll get to know a bit more about me and what I've been transforming with people: through artificial intelligence, digital solutions, problem-solving methods like Lean, and project management that combines agile and hybrid practices from the PMBOK.",
                 'hero-badge': 'Continuous Improvement & Applied AI · Black Belt · Digital Solutions',
                 'cta-projects': 'See results',
                 'voice-play': 'HEAR IT IN MY VOICE', 'voice-pause': 'PAUSE',
+                'skip-link': 'Skip to content',
                 'metric1': 'saved across facilitated Lean projects',
                 'metric2': 'setup time, app built solo with AI',
                 'metric3': 'squads with KPIs and OKRs under governance',
