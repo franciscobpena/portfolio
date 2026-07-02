@@ -479,6 +479,28 @@
         @media screen and (max-width: 560px) { .skills-grid { grid-template-columns: 1fr; } }
 
         /* ======================================
+           Na mídia
+        ====================================== */
+        .media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+        .media-card {
+            background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
+            padding: 1.6rem; display: flex; flex-direction: column; gap: 0.8rem;
+            transition: border-color 240ms var(--ease-out), transform 240ms var(--ease-out);
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .media-card:hover { border-color: var(--line); transform: translateY(-3px); }
+        }
+        .media-card[hidden] { display: none; }
+        .media-badge { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); }
+        .media-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--text); }
+        .media-card p { color: var(--muted); font-size: 0.9rem; }
+        .media-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid var(--line-soft); background: #000; }
+        .media-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--teal); font-size: 0.9rem; font-weight: 500; text-decoration: none; margin-top: auto; }
+        .media-link:hover { text-decoration: underline; }
+        .media-link svg { width: 15px; height: 15px; }
+        @media screen and (max-width: 700px) { .media-grid { grid-template-columns: 1fr; } }
+
+        /* ======================================
            Contato
         ====================================== */
         .contact-section { text-align: center; }
@@ -555,6 +577,7 @@
                         <li><a href="#about-me" class="nav-link" data-key="nav-about">Sobre</a></li>
                         <li><a href="#recommendations" class="nav-link" data-key="nav-recommendations">Recomendações</a></li>
                         <li><a href="#projects" class="nav-link" data-key="nav-projects">Resultados</a></li>
+                        <li><a href="#media" class="nav-link" data-key="nav-media">Na mídia</a></li>
                         <li><a href="#skills" class="nav-link" data-key="nav-skills">Habilidades</a></li>
                         <li><a href="#contact" class="nav-link" data-key="nav-contact">Contato</a></li>
                     </ul>
@@ -784,6 +807,42 @@
             </div>
         </section>
 
+        <!-- ===================== Na mídia ===================== -->
+        <section id="media" class="media-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow" data-key="media-eyebrow">Falas e imprensa</span>
+                    <h2 class="section-title" data-key="media-header">Na mídia</h2>
+                </div>
+                <div class="media-grid">
+                    <article class="media-card reveal" id="media-ms-card" hidden>
+                        <span class="media-badge" data-key="media-ms-badge">Ministério da Saúde</span>
+                        <h3 data-key="media-ms-title">Os 8 desperdícios do Lean na saúde</h3>
+                        <video class="media-video" controls preload="none" src="assets/midia/ministerio-desperdicios.mp4"></video>
+                        <p data-key="media-ms-desc">Recorte da fala sobre os desperdícios do Lean aplicados à saúde.</p>
+                    </article>
+                    <article class="media-card reveal">
+                        <span class="media-badge" data-key="media-hsa-badge">Podcast · Hospital Santo Antônio</span>
+                        <h3 data-key="media-hsa-title">Melhoria contínua na prática hospitalar</h3>
+                        <video class="media-video" controls preload="none" poster="assets/midia/podcast-hsa-poster.jpg" src="assets/midia/podcast-hsa.mp4"></video>
+                        <p data-key="media-hsa-desc">Recorte da participação no podcast do hospital.</p>
+                    </article>
+                    <article class="media-card reveal">
+                        <span class="media-badge" data-key="media-careon-badge">Careon Academy · LinkedIn</span>
+                        <h3 data-key="media-careon-title">Experiência do paciente</h3>
+                        <p data-key="media-careon-desc">Aula "E se a Disney administrasse o seu hospital?", destacada pela Careon Academy.</p>
+                        <a class="media-link" href="https://www.linkedin.com/posts/careonacademy-careonapp-vemsercareon-ugcPost-7193662591779405824-5aNj/" target="_blank" rel="noopener noreferrer"><span data-key="media-careon-cta">Ver publicação no LinkedIn</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                    </article>
+                    <article class="media-card reveal">
+                        <span class="media-badge" data-key="media-valor-badge">Valor Econômico</span>
+                        <h3 data-key="media-valor-title">Fusão Apex Partners × MAF (Grupo Modal)</h3>
+                        <p data-key="media-valor-desc">Atuação como líder de projetos na integração das duas gestoras.</p>
+                        <a class="media-link" href="https://valor.globo.com/financas/noticia/2022/09/01/apex-fecha-compra-da-maf-do-grupo-modal.ghtml" target="_blank" rel="noopener noreferrer"><span data-key="media-valor-cta">Ler matéria no Valor</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- ===================== Habilidades ===================== -->
         <section id="skills" class="skills-section">
             <div class="container">
@@ -888,7 +947,7 @@
         const translations = {
             pt: {
                 'nav-projects': 'Resultados', 'nav-about': 'Sobre', 'nav-recommendations': 'Recomendações',
-                'nav-skills': 'Habilidades', 'nav-contact': 'Contato',
+                'nav-skills': 'Habilidades', 'nav-contact': 'Contato', 'nav-media': 'Na mídia',
 
                 'welcome-text': 'IA e Lean aplicados pra escalar eficiência em operações reais.',
                 'hero-badge': 'Melhoria Contínua e IA Aplicada · Black Belt · Soluções Digitais',
@@ -942,6 +1001,23 @@
                 't7-b2': 'Mercer: análises estatísticas pra relatórios de mercado em consultoria de capital humano',
                 't7-b3': 'Usiminas: início em qualidade, otimizando as rotinas do laboratório de ensaios mecânicos',
 
+                'media-eyebrow': 'Falas e imprensa',
+                'media-header': 'Na mídia',
+                'media-ms-badge': 'Ministério da Saúde',
+                'media-ms-title': 'Os 8 desperdícios do Lean na saúde',
+                'media-ms-desc': 'Recorte da fala sobre os desperdícios do Lean aplicados à saúde.',
+                'media-hsa-badge': 'Podcast · Hospital Santo Antônio',
+                'media-hsa-title': 'Melhoria contínua na prática hospitalar',
+                'media-hsa-desc': 'Recorte da participação no podcast do hospital.',
+                'media-careon-badge': 'Careon Academy · LinkedIn',
+                'media-careon-title': 'Experiência do paciente',
+                'media-careon-desc': 'Aula "E se a Disney administrasse o seu hospital?", destacada pela Careon Academy.',
+                'media-careon-cta': 'Ver publicação no LinkedIn',
+                'media-valor-badge': 'Valor Econômico',
+                'media-valor-title': 'Fusão Apex Partners × MAF (Grupo Modal)',
+                'media-valor-desc': 'Atuação como líder de projetos na integração das duas gestoras.',
+                'media-valor-cta': 'Ler matéria no Valor',
+
                 'about-me-header': 'Sobre mim',
                 'cred1': 'Black Belt & Green Belt Lean Six Sigma',
                 'cred2': 'PMP · Scrum (PSM) · Kanban (KMP) · OKR',
@@ -977,7 +1053,7 @@
             },
             en: {
                 'nav-projects': 'Results', 'nav-about': 'About', 'nav-recommendations': 'Recommendations',
-                'nav-skills': 'Skills', 'nav-contact': 'Contact',
+                'nav-skills': 'Skills', 'nav-contact': 'Contact', 'nav-media': 'In the media',
 
                 'welcome-text': 'AI and Lean applied to scale efficiency in real operations.',
                 'hero-badge': 'Continuous Improvement & Applied AI · Black Belt · Digital Solutions',
@@ -1030,6 +1106,23 @@
                 't7-b1': '3 Corações: replicable commercial management model (processes, standards and training) for a <strong>5,000-person sales force</strong>, plus a delinquency-reduction Green Belt targeting <strong>R$500K/year</strong>',
                 't7-b2': 'Mercer: statistical analysis for market reports in human capital consulting',
                 't7-b3': 'Usiminas: started out in quality, optimizing mechanical testing lab routines',
+
+                'media-eyebrow': 'Talks & press',
+                'media-header': 'In the media',
+                'media-ms-badge': 'Ministry of Health (Brazil)',
+                'media-ms-title': 'The 8 Lean wastes in healthcare',
+                'media-ms-desc': 'Clip from a talk on Lean wastes applied to healthcare.',
+                'media-hsa-badge': 'Podcast · Hospital Santo Antônio',
+                'media-hsa-title': 'Continuous improvement in hospital practice',
+                'media-hsa-desc': 'Clip from the hospital\'s podcast.',
+                'media-careon-badge': 'Careon Academy · LinkedIn',
+                'media-careon-title': 'Patient experience',
+                'media-careon-desc': 'Class "What if Disney ran your hospital?", featured by Careon Academy.',
+                'media-careon-cta': 'View post on LinkedIn',
+                'media-valor-badge': 'Valor Econômico',
+                'media-valor-title': 'Apex Partners × MAF (Modal Group) merger',
+                'media-valor-desc': 'Project lead supporting the integration of the two asset managers.',
+                'media-valor-cta': 'Read the article',
 
                 'about-me-header': 'About me',
                 'cred1': 'Lean Six Sigma Black Belt & Green Belt',
