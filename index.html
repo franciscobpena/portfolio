@@ -495,6 +495,11 @@
         .media-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--text); }
         .media-card p { color: var(--muted); font-size: 0.9rem; }
         .media-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid var(--line-soft); background: #000; }
+        .media-thumb { display: block; border-radius: 10px; border: 1px solid var(--line-soft); overflow: hidden; }
+        .media-thumb img { display: block; width: 100%; height: auto; transition: transform 400ms var(--ease-out); }
+        @media (hover: hover) and (pointer: fine) {
+            .media-thumb:hover img { transform: scale(1.03); }
+        }
         .media-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--teal); font-size: 0.9rem; font-weight: 500; text-decoration: none; margin-top: auto; }
         .media-link:hover { text-decoration: underline; }
         .media-link svg { width: 15px; height: 15px; }
@@ -830,12 +835,14 @@
                     <article class="media-card reveal">
                         <span class="media-badge" data-key="media-careon-badge">Careon Academy · LinkedIn</span>
                         <h3 data-key="media-careon-title">Experiência do paciente</h3>
-                        <p data-key="media-careon-desc">Aula "E se a Disney administrasse o seu hospital?", destacada pela Careon Academy.</p>
+                        <a class="media-thumb" href="https://www.linkedin.com/posts/careonacademy-careonapp-vemsercareon-ugcPost-7193662591779405824-5aNj/" target="_blank" rel="noopener noreferrer"><img src="assets/midia/careon-thumb.jpg" alt="Francisco no curso Experiência do Paciente da Careon Academy" loading="lazy"></a>
+                        <p data-key="media-careon-desc">Curso na Careon Academy, destacado na página da empresa.</p>
                         <a class="media-link" href="https://www.linkedin.com/posts/careonacademy-careonapp-vemsercareon-ugcPost-7193662591779405824-5aNj/" target="_blank" rel="noopener noreferrer"><span data-key="media-careon-cta">Ver publicação no LinkedIn</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
                     </article>
                     <article class="media-card reveal">
                         <span class="media-badge" data-key="media-valor-badge">Valor Econômico</span>
                         <h3 data-key="media-valor-title">Fusão Apex Partners × MAF (Grupo Modal)</h3>
+                        <a class="media-thumb" href="https://valor.globo.com/financas/noticia/2022/09/01/apex-fecha-compra-da-maf-do-grupo-modal.ghtml" target="_blank" rel="noopener noreferrer"><img src="assets/midia/valor-thumb.jpg" alt="Manchete do Valor Econômico: Apex fecha compra da MAF, do grupo Modal" loading="lazy"></a>
                         <p data-key="media-valor-desc">Atuação como líder de projetos na integração das duas gestoras.</p>
                         <a class="media-link" href="https://valor.globo.com/financas/noticia/2022/09/01/apex-fecha-compra-da-maf-do-grupo-modal.ghtml" target="_blank" rel="noopener noreferrer"><span data-key="media-valor-cta">Ler matéria no Valor</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
                     </article>
@@ -1011,7 +1018,7 @@
                 'media-hsa-desc': 'Recorte da participação no podcast do hospital.',
                 'media-careon-badge': 'Careon Academy · LinkedIn',
                 'media-careon-title': 'Experiência do paciente',
-                'media-careon-desc': 'Aula "E se a Disney administrasse o seu hospital?", destacada pela Careon Academy.',
+                'media-careon-desc': 'Curso na Careon Academy, destacado na página da empresa.',
                 'media-careon-cta': 'Ver publicação no LinkedIn',
                 'media-valor-badge': 'Valor Econômico',
                 'media-valor-title': 'Fusão Apex Partners × MAF (Grupo Modal)',
@@ -1117,7 +1124,7 @@
                 'media-hsa-desc': 'Clip from the hospital\'s podcast.',
                 'media-careon-badge': 'Careon Academy · LinkedIn',
                 'media-careon-title': 'Patient experience',
-                'media-careon-desc': 'Class "What if Disney ran your hospital?", featured by Careon Academy.',
+                'media-careon-desc': 'Patient Experience course on Careon Academy, featured on the company\'s page.',
                 'media-careon-cta': 'View post on LinkedIn',
                 'media-valor-badge': 'Valor Econômico',
                 'media-valor-title': 'Apex Partners × MAF (Modal Group) merger',
