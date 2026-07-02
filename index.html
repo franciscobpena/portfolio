@@ -525,7 +525,7 @@
                         </p>
                         <div class="hero-actions" data-stagger="4">
                             <a href="#projects" class="btn btn-primary"><span data-key="cta-projects">Ver resultados</span> <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
-                            <button class="voice-btn" id="voice-btn" aria-label="Ouvir apresentação na minha voz">
+                            <button class="voice-btn" id="voice-btn" aria-label="Ouvir apresentação na minha voz" aria-pressed="false">
                                 <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
                                 <span id="voice-label" data-key="voice-play">OUÇA NA MINHA VOZ</span>
                             </button>
@@ -1033,7 +1033,7 @@
             syncVoiceLabel();
         }
 
-        // ---- Voz clonada (click-to-play) ----
+        // ---- Voz clonada (autoplay com fallback de primeiro gesto) ----
         const audio = document.getElementById('hero-audio');
         const voiceBtn = document.getElementById('voice-btn');
         const voiceLabel = document.getElementById('voice-label');
@@ -1043,19 +1043,38 @@
             const lang = currentLang();
             const playing = audio && !audio.paused && !audio.ended;
             voiceLabel.textContent = translations[lang][playing ? 'voice-pause' : 'voice-play'];
+            if (voiceBtn) voiceBtn.setAttribute('aria-pressed', String(playing));
         }
         if (voiceBtn && audio) {
+            let userPaused = false;
+            const gestureEvents = ['pointerdown', 'keydown', 'wheel', 'touchstart'];
+            function removeGestureListeners() {
+                gestureEvents.forEach(ev => document.removeEventListener(ev, onFirstGesture));
+            }
+            function onFirstGesture(e) {
+                removeGestureListeners(); // os listeners se removem mutuamente: toca 1x só
+                if (e && e.target && voiceBtn.contains(e.target)) return; // clique no próprio botão: o handler de click decide
+                if (!userPaused && audio.paused) audio.play().catch(() => {});
+            }
+            function armGestureListeners() {
+                gestureEvents.forEach(ev => document.addEventListener(ev, onFirstGesture, { once: true, passive: true }));
+            }
             voiceBtn.addEventListener('click', () => {
-                if (audio.paused) { audio.play().catch(() => {}); }
-                else { audio.pause(); }
+                if (audio.paused) { userPaused = false; audio.play().catch(() => {}); }
+                else { userPaused = true; audio.pause(); } // pausou: não re-armar
             });
             audio.addEventListener('play', () => { voiceBtn.classList.add('playing'); syncVoiceLabel(); });
             audio.addEventListener('pause', () => { voiceBtn.classList.remove('playing'); syncVoiceLabel(); });
             audio.addEventListener('ended', () => { voiceBtn.classList.remove('playing'); syncVoiceLabel(); });
-            // Sem botao morto: so mostra o botao de voz se o mp3 existir de fato
+            // Fail-closed: so mostra o botao (e tenta autoplay) se o mp3 existir de fato
             voiceBtn.style.display = 'none';
             fetch(audio.getAttribute('src'), { method: 'HEAD' })
-                .then(r => { if (r.ok) voiceBtn.style.display = 'inline-flex'; })
+                .then(r => {
+                    if (!r.ok) return;
+                    voiceBtn.style.display = 'inline-flex';
+                    // tenta tocar direto; se a politica de autoplay negar, toca no primeiro gesto
+                    audio.play().catch(() => { armGestureListeners(); });
+                })
                 .catch(() => {});
         }
 
