@@ -4,5 +4,4 @@ node_modules/
 *.log
 Thumbs.db
 
-.vercel
 assets/body-hero-vo.json
