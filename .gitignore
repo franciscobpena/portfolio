@@ -5,3 +5,4 @@ node_modules/
 Thumbs.db
 
 .vercel
+assets/body-hero-vo.json
