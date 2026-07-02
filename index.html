@@ -491,6 +491,7 @@
             .media-card:hover { border-color: var(--line); transform: translateY(-3px); }
         }
         .media-card[hidden] { display: none; }
+        .media-lead { color: var(--muted); font-size: 0.95rem; margin-top: 0.8rem; }
         .media-badge { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); }
         .media-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--text); }
         .media-card p { color: var(--muted); font-size: 0.9rem; }
@@ -818,31 +819,32 @@
                 <div class="section-head">
                     <span class="eyebrow" data-key="media-eyebrow">Falas e imprensa</span>
                     <h2 class="section-title" data-key="media-header">Na mídia</h2>
+                    <p class="media-lead" data-key="media-lead">Melhoria contínua e experiência do cliente, da saúde ao mercado financeiro.</p>
                 </div>
                 <div class="media-grid">
-                    <article class="media-card reveal" id="media-ms-card" hidden>
+                    <article class="media-card reveal" id="media-ms-card">
                         <span class="media-badge" data-key="media-ms-badge">Ministério da Saúde</span>
-                        <h3 data-key="media-ms-title">Os 8 desperdícios do Lean na saúde</h3>
-                        <video class="media-video" controls preload="none" src="assets/midia/ministerio-desperdicios.mp4"></video>
-                        <p data-key="media-ms-desc">Recorte da fala sobre os desperdícios do Lean aplicados à saúde.</p>
+                        <h3 data-key="media-ms-title">Os 8 desperdícios do Lean</h3>
+                        <video class="media-video" controls preload="none" poster="assets/midia/ministerio-desperdicios-poster.jpg" src="assets/midia/ministerio-desperdicios.mp4"></video>
+                        <p data-key="media-ms-desc">Recorte da fala no Ministério da Saúde sobre dar nome aos desperdícios para conseguir enxergar e medir. Os exemplos vêm do hospital; os 8 tipos aparecem em qualquer operação de serviço.</p>
                     </article>
                     <article class="media-card reveal">
                         <span class="media-badge" data-key="media-hsa-badge">Podcast · Hospital Santo Antônio</span>
-                        <h3 data-key="media-hsa-title">Melhoria contínua na prática hospitalar</h3>
+                        <h3 data-key="media-hsa-title">Melhoria contínua na rotina da operação</h3>
                         <video class="media-video" controls preload="none" poster="assets/midia/podcast-hsa-poster.jpg" src="assets/midia/podcast-hsa.mp4"></video>
-                        <p data-key="media-hsa-desc">Recorte da participação no podcast do hospital.</p>
+                        <p data-key="media-hsa-desc">Recorte da conversa no podcast do hospital sobre sustentar a melhoria no dia a dia, do gemba à liderança pelo exemplo.</p>
                     </article>
                     <article class="media-card reveal">
                         <span class="media-badge" data-key="media-careon-badge">Careon Academy</span>
-                        <h3 data-key="media-careon-title">NPS e CSAT: indicadores de experiência</h3>
+                        <h3 data-key="media-careon-title">NPS e CSAT: indicadores de experiência do cliente</h3>
                         <video class="media-video" controls preload="none" poster="assets/midia/careon-nps-csat-poster.jpg" src="assets/midia/careon-nps-csat.mp4"></video>
-                        <p data-key="media-careon-desc">Trecho da aula de KPIs do curso Experiência do Paciente.</p>
+                        <p data-key="media-careon-desc">Trecho da aula de KPIs do curso Experiência do Paciente. NPS e CSAT nasceram para medir jornada, e servem tanto para o cliente quanto para o colaborador, em qualquer segmento.</p>
                     </article>
                     <article class="media-card reveal">
                         <span class="media-badge" data-key="media-valor-badge">Valor Econômico</span>
-                        <h3 data-key="media-valor-title">Fusão Apex Partners × MAF (Grupo Modal)</h3>
+                        <h3 data-key="media-valor-title">Integração na fusão Apex Partners × MAF</h3>
                         <a class="media-thumb" href="https://valor.globo.com/financas/noticia/2022/09/01/apex-fecha-compra-da-maf-do-grupo-modal.ghtml" target="_blank" rel="noopener noreferrer"><img src="assets/midia/valor-thumb.jpg" alt="Manchete do Valor Econômico: Apex fecha compra da MAF, do grupo Modal" loading="lazy"></a>
-                        <p data-key="media-valor-desc">Atuação como líder de projetos na integração das duas gestoras.</p>
+                        <p data-key="media-valor-desc">Cobertura da fusão das duas gestoras, com atuação à frente dos projetos de integração. Melhoria de processos também no mercado financeiro.</p>
                         <a class="media-link" href="https://valor.globo.com/financas/noticia/2022/09/01/apex-fecha-compra-da-maf-do-grupo-modal.ghtml" target="_blank" rel="noopener noreferrer"><span data-key="media-valor-cta">Ler matéria no Valor</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
                     </article>
                 </div>
@@ -1009,18 +1011,19 @@
 
                 'media-eyebrow': 'Falas e imprensa',
                 'media-header': 'Na mídia',
+                'media-lead': 'Melhoria contínua e experiência do cliente, da saúde ao mercado financeiro.',
                 'media-ms-badge': 'Ministério da Saúde',
-                'media-ms-title': 'Os 8 desperdícios do Lean na saúde',
-                'media-ms-desc': 'Recorte da fala sobre os desperdícios do Lean aplicados à saúde.',
+                'media-ms-title': 'Os 8 desperdícios do Lean',
+                'media-ms-desc': 'Recorte da fala no Ministério da Saúde sobre dar nome aos desperdícios para conseguir enxergar e medir. Os exemplos vêm do hospital; os 8 tipos aparecem em qualquer operação de serviço.',
                 'media-hsa-badge': 'Podcast · Hospital Santo Antônio',
-                'media-hsa-title': 'Melhoria contínua na prática hospitalar',
-                'media-hsa-desc': 'Recorte da participação no podcast do hospital.',
+                'media-hsa-title': 'Melhoria contínua na rotina da operação',
+                'media-hsa-desc': 'Recorte da conversa no podcast do hospital sobre sustentar a melhoria no dia a dia, do gemba à liderança pelo exemplo.',
                 'media-careon-badge': 'Careon Academy',
-                'media-careon-title': 'NPS e CSAT: indicadores de experiência',
-                'media-careon-desc': 'Trecho da aula de KPIs do curso Experiência do Paciente.',
+                'media-careon-title': 'NPS e CSAT: indicadores de experiência do cliente',
+                'media-careon-desc': 'Trecho da aula de KPIs do curso Experiência do Paciente. NPS e CSAT nasceram para medir jornada, e servem tanto para o cliente quanto para o colaborador, em qualquer segmento.',
                 'media-valor-badge': 'Valor Econômico',
-                'media-valor-title': 'Fusão Apex Partners × MAF (Grupo Modal)',
-                'media-valor-desc': 'Atuação como líder de projetos na integração das duas gestoras.',
+                'media-valor-title': 'Integração na fusão Apex Partners × MAF',
+                'media-valor-desc': 'Cobertura da fusão das duas gestoras, com atuação à frente dos projetos de integração. Melhoria de processos também no mercado financeiro.',
                 'media-valor-cta': 'Ler matéria no Valor',
 
                 'about-me-header': 'Sobre mim',
@@ -1114,18 +1117,19 @@
 
                 'media-eyebrow': 'Talks & press',
                 'media-header': 'In the media',
+                'media-lead': 'Continuous improvement and customer experience, from healthcare to financial markets.',
                 'media-ms-badge': 'Ministry of Health (Brazil)',
-                'media-ms-title': 'The 8 Lean wastes in healthcare',
-                'media-ms-desc': 'Clip from a talk on Lean wastes applied to healthcare.',
+                'media-ms-title': 'The 8 wastes of Lean',
+                'media-ms-desc': 'Clip from a talk at Brazil\'s Ministry of Health on naming wastes so you can see and measure them. The examples come from hospitals; the 8 types show up in any service operation.',
                 'media-hsa-badge': 'Podcast · Hospital Santo Antônio',
-                'media-hsa-title': 'Continuous improvement in hospital practice',
-                'media-hsa-desc': 'Clip from the hospital\'s podcast.',
+                'media-hsa-title': 'Continuous improvement in day-to-day operations',
+                'media-hsa-desc': 'Excerpt from the hospital\'s podcast on sustaining improvement in the daily routine, from gemba to leading by example.',
                 'media-careon-badge': 'Careon Academy',
-                'media-careon-title': 'NPS & CSAT: experience metrics',
-                'media-careon-desc': 'Clip from the KPIs class of the Patient Experience course.',
+                'media-careon-title': 'NPS and CSAT: measuring customer experience',
+                'media-careon-desc': 'Excerpt from the KPI class in the Patient Experience course. NPS and CSAT were built to measure journeys, and they work for customers and employees alike, in any industry.',
                 'media-valor-badge': 'Valor Econômico',
-                'media-valor-title': 'Apex Partners × MAF (Modal Group) merger',
-                'media-valor-desc': 'Project lead supporting the integration of the two asset managers.',
+                'media-valor-title': 'Apex Partners × MAF merger integration',
+                'media-valor-desc': 'Press coverage of the two asset managers\' merger, leading the integration projects. Process improvement in financial markets as well.',
                 'media-valor-cta': 'Read the article',
 
                 'about-me-header': 'About me',
