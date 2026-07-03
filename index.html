@@ -1181,6 +1181,18 @@
                 btn.setAttribute('aria-pressed', on);
             });
             localStorage.setItem('preferred-language', lang);
+            // voz do hero acompanha o idioma (clone nativo PT/EN)
+            const heroAudio = document.getElementById('hero-audio');
+            if (heroAudio) {
+                const src = lang === 'en' ? 'assets/hero-vo-en.mp3' : 'assets/hero-vo.mp3';
+                if (!heroAudio.getAttribute('src').endsWith(src)) {
+                    const estavaTocando = !heroAudio.paused && !heroAudio.ended;
+                    heroAudio.pause();
+                    heroAudio.setAttribute('src', src);
+                    heroAudio.load();
+                    if (estavaTocando) heroAudio.play().catch(() => {});
+                }
+            }
             // re-sync voice label with play/pause state
             syncVoiceLabel();
         }
